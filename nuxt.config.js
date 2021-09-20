@@ -1,6 +1,8 @@
 const config = require('./.contentful.json')
 
 export default {
+  publicRuntimeConfig: {},
+
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
@@ -34,7 +36,55 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
+    'nuxt-graphql-request',
   ],
+
+  graphql: {
+    /**
+     * An Object of your GraphQL clients
+     */
+    clients: {
+      default: {
+        /**
+         * The client endpoint url
+         */
+        endpoint:
+          'https://graphql.contentful.com/content/v1/spaces/vlkuc5e6h3ku',
+        /**
+         * Per-client options overrides
+         * See: https://github.com/prisma-labs/graphql-request#passing-more-options-to-fetch
+         */
+        options: {
+          headers: {
+            authorization: 'Bearer -Su1tjxF-qpNwC97V3moe00qishyE4Q0z6Wwmk0jYyM',
+            'Content-Type': 'application/json',
+          },
+        },
+      },
+      secondClient: {
+        // ...client config
+      },
+      // ...your other clients
+    },
+
+    /**
+     * Options
+     * See: https://github.com/prisma-labs/graphql-request#passing-more-options-to-fetch
+     */
+    options: {},
+
+    /**
+     * Optional
+     * default: true (this includes cross-fetch/polyfill before creating the graphql client)
+     */
+    useFetchPolyfill: true,
+
+    /**
+     * Optional
+     * default: false (this includes graphql-tag for node_modules folder)
+     */
+    includeNodeModules: true,
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},

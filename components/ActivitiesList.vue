@@ -3,33 +3,29 @@
     <nav>
       <ul role="menu" class="articles">
         <li
-          v-for="(activity, index) in activityItems"
-          :key="index"
+          v-for="activity in activityItems.activityCollection.items"
+          :key="activity.title"
           class="article"
         >
-          <p>{{ activity.fields.Text }}</p>
+          <p>{{ activity.text }}</p>
           <img
-            :src="`${activity.fields.image.fields.file.url}?w=500`"
-            :alt="`${activity.fields.image.fields.description}`"
+            :src="`${activity.image.url}?w=500`"
+            :alt="`${activity.image.description}`"
             class="article__image"
           />
 
           <ul class="chips">
             <li
-              v-for="(category, index) in activity.fields.categoryReferences"
+              v-for="(category, index) in activity.categoryReferencesCollection
+                .items"
               :key="index"
               class="chip"
             >
-              <nuxt-link
-                :to="'/categories/' + category.fields.slug.trim()"
-                role="menuitem"
-              >
-                {{ category.fields.categoryName }}
+              <nuxt-link :to="'/categories/' + category.slug" role="menuitem">
+                {{ category.categoryName }}
               </nuxt-link>
             </li>
           </ul>
-
-          <p>{{ activity.fields }}</p>
         </li>
       </ul>
     </nav>
@@ -41,7 +37,7 @@ export default {
   name: 'ActivitiesList',
   props: {
     activityItems: {
-      type: Array,
+      type: Object,
       required: true,
     },
   },

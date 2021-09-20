@@ -10,30 +10,61 @@
   </section>
 </template>
 <script>
-import { createClient } from '../plugins/contentful'
+import { gql } from 'nuxt-graphql-request'
 import ActivitiesList from '~/components/ActivitiesList.vue'
-const contentfulClient = createClient()
+
 export default {
   components: {
     ActivitiesList,
   },
-  asyncData({ env }) {
-    return Promise.all([
-      // fetch all blog posts sorted by creation date
-      contentfulClient.getEntries({
-        content_type: 'activity',
-        order: '-sys.createdAt',
-      }),
-    ])
-      .then(([activities]) => {
-        console.log(activities.items)
-        // return data that should be available
-        // in the template
-        return {
-          activities: activities.items,
+  async asyncData({ $graphql, params }) {
+    const query = gql`
+      query {
+        activityCollection {
+          items {
+            text
+            image {
+              title
+              description
+              contentType
+              fileName
+              size
+              url
+              width
+              height
+            }
+            categoryReferencesCollection {
+              items {
+                categoryName
+                slug
+              }
+            }
+          }
         }
-      })
-      .catch(console.error)
+      }
+    `
+    const activities = await $graphql.default.request(query)
+    console.log(activities.activityCollection)
+    return { activities }
   },
+
+  // asyncData({ env }) {
+  //   return Promise.all([
+  //     // fetch all blog posts sorted by creation date
+  //     contentfulClient.getEntries({
+  //       content_type: 'activity',
+  //       order: '-sys.createdAt',
+  //     }),
+  //   ])
+  //     .then(([activities]) => {
+  //       console.log(activities.items)
+  //       // return data that should be available
+  //       // in the template
+  //       return {
+  //         activities: activities.items,
+  //       }
+  //     })
+  //     .catch(console.error)
+  // },
 }
 </script>
