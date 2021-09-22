@@ -1,45 +1,41 @@
 <template>
   <div class="page-component">
-    <div
+    <!-- <div
       v-for="(link, index) in categoryList.categoryCollection.items"
       :key="index"
       class="article"
     >
       <ul>
-        <li
-          v-for="activity in link.linkedFrom.activityCollection.items"
-          :key="activity.text"
+        <div
+          v-for="activityItem in link.linkedFrom.activityCollection.items"
+          :key="activityItem.text"
         >
-          {{ activity.text }}
-        </li>
+          {{ activityItem }}
+        </div>
       </ul>
-      <!-- <img
-          :src="`${activity.image.url}?w=500`"
-          :alt="`${activity.image.description}`"
-          class="article__image"
-        /> -->
-
-      <!-- <ul class="chips">
-          <li
-            v-for="(category, index) in activity.categoryReferencesCollection
-              .items"
-            :key="index"
-            class="chip"
-          >
-            <nuxt-link :to="'/categories/' + category.slug" role="menuitem">
-              {{ category.categoryName }}
-            </nuxt-link>
-          </li>
-        </ul> -->
-    </div>
+    </div> -->
+    {{
+      categoryList.categoryCollection.items[0].linkedFrom.activityCollection
+        .items
+    }}
   </div>
 </template>
 
 <script>
 import { gql } from 'nuxt-graphql-request'
+// import Activity from '~/components/Activity.vue'
 
 export default {
   name: 'Index',
+  components: {
+    // Activity,
+  },
+  props: {
+    activity: {
+      type: Object,
+      required: true,
+    },
+  },
   async asyncData({ $graphql, params }) {
     const query = gql`
       query {
@@ -47,9 +43,10 @@ export default {
           items {
             linkedFrom {
               activityCollection {
-                total
                 items {
-                  text
+                  sys {
+                    id
+                  }
                 }
               }
             }
@@ -58,7 +55,7 @@ export default {
       }
     `
     const categoryList = await $graphql.default.request(query)
-    console.log(categoryList.categoryCollection)
+    console.log(categoryList)
     return { categoryList }
   },
 }
