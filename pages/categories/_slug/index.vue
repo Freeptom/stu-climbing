@@ -1,26 +1,7 @@
 <template>
   <div class="page-component">
-    <!-- <div
-      v-for="(link, index) in categoryList.categoryCollection.items"
-      :key="index"
-      class="article"
-    >
-      <ul>
-        <div
-          v-for="activityItem in link.linkedFrom.activityCollection.items"
-          :key="activityItem.text"
-        >
-          {{ activityItem }}
-        </div>
-      </ul>
-    </div> -->
-    <div
-      v-for="(item, index) in activitiesFromCategory.categoryCollection.items[0]
-        .linkedFrom.activityCollection.items"
-      :key="index"
-    >
-      {{ item.sys.id }}
-    </div>
+    {{ activitiesFromCategory }}
+    {{ getActivities }}
   </div>
 </template>
 
@@ -33,14 +14,9 @@ export default {
   components: {
     // Activity,
   },
-  props: {
-    activity: {
-      type: Object,
-      required: true,
-    },
-  },
+
   async asyncData({ $graphql, params }) {
-    const query = gql`
+    const actByCat = gql`
       query {
         categoryCollection(where: { slug: "${params.slug}" }, limit: 10) {
           items {
@@ -57,37 +33,46 @@ export default {
         }
       }
     `
-    // const query = gql`
-    //   query {
-    //     activityCollection(
-    //       where: {
-    //         sys: { id_in: ["1UG3IzwcFlFxTEdqQfisSU", "3r7elqOc3ahapygyHaoxfh"] }
-    //       }
-    //     ) {
-    //       items {
-    //         text
-    //         image {
-    //           title
-    //           description
-    //           contentType
-    //           fileName
-    //           size
-    //           url
-    //           width
-    //           height
-    //         }
-    //         categoryReferencesCollection {
-    //           items {
-    //             categoryName
-    //           }
-    //         }
-    //       }
-    //     }
-    //   }
-    // `
-    const activitiesFromCategory = await $graphql.default.request(query)
-    console.log(activitiesFromCategory.categoryCollection)
-    return { activitiesFromCategory }
+    const ids = []
+    const activitiesFromCategory = await $graphql.default.request(actByCat)
+    console.log(activitiesFromCategory)
+    const idsGroup =
+      activitiesFromCategory.categoryCollection.items[0].linkedFrom
+        .activityCollection.items
+
+    idsGroup.forEach((id) => ids.push(id.sys.id))
+
+    const getById = gql`
+      query {
+        activityCollection(
+          where: {
+            sys: { id_in: ["1UG3IzwcFlFxTEdqQfisSU", "3r7elqOc3ahapygyHaoxfh"] }
+          }
+        ) {
+          items {
+            text
+            image {
+              title
+              description
+              contentType
+              fileName
+              size
+              url
+              width
+              height
+            }
+            categoryReferencesCollection {
+              items {
+                categoryName
+              }
+            }
+          }
+        }
+      }
+    `
+    const getActivities = await $graphql.default.request(getById)
+
+    return { activitiesFromCategory, getActivities }
   },
 }
 </script>
