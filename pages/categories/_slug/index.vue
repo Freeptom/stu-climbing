@@ -14,10 +14,13 @@
         </div>
       </ul>
     </div> -->
-    {{
-      categoryList.categoryCollection.items[0].linkedFrom.activityCollection
-        .items
-    }}
+    <div
+      v-for="(item, index) in activitiesFromCategory.categoryCollection.items[0]
+        .linkedFrom.activityCollection.items"
+      :key="index"
+    >
+      {{ item.sys.id }}
+    </div>
   </div>
 </template>
 
@@ -54,9 +57,37 @@ export default {
         }
       }
     `
-    const categoryList = await $graphql.default.request(query)
-    console.log(categoryList)
-    return { categoryList }
+    // const query = gql`
+    //   query {
+    //     activityCollection(
+    //       where: {
+    //         sys: { id_in: ["1UG3IzwcFlFxTEdqQfisSU", "3r7elqOc3ahapygyHaoxfh"] }
+    //       }
+    //     ) {
+    //       items {
+    //         text
+    //         image {
+    //           title
+    //           description
+    //           contentType
+    //           fileName
+    //           size
+    //           url
+    //           width
+    //           height
+    //         }
+    //         categoryReferencesCollection {
+    //           items {
+    //             categoryName
+    //           }
+    //         }
+    //       }
+    //     }
+    //   }
+    // `
+    const activitiesFromCategory = await $graphql.default.request(query)
+    console.log(activitiesFromCategory.categoryCollection)
+    return { activitiesFromCategory }
   },
 }
 </script>
