@@ -1,13 +1,13 @@
 <template>
   <section class="container">
-    <div
+    <nuxt-link
       v-for="category in categories.categoryCollection.items"
       :key="category.categoryName"
+      :to="'/categories/' + category.slug"
+      role="menuitem"
     >
-      <nuxt-link :to="'/categories/' + category.slug" role="menuitem">
-        {{ category.categoryName }}
-      </nuxt-link>
-    </div>
+      {{ category.categoryName }}
+    </nuxt-link>
   </section>
 </template>
 <script>

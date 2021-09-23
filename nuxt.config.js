@@ -1,4 +1,4 @@
-const config = require('./.contentful.json')
+import config from './.contentful.json'
 
 export default {
   publicRuntimeConfig: {},
