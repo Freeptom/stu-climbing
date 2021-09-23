@@ -11,7 +11,7 @@ export default {
   components: {
     ActivitiesList,
   },
-  async asyncData({ $graphql, params }) {
+  async asyncData({ $graphql }) {
     const query = gql`
       query {
         activityCollection {
@@ -38,27 +38,7 @@ export default {
       }
     `
     const activities = await $graphql.default.request(query)
-    console.log(activities.activityCollection)
     return { activities }
   },
-
-  // asyncData({ env }) {
-  //   return Promise.all([
-  //     // fetch all blog posts sorted by creation date
-  //     contentfulClient.getEntries({
-  //       content_type: 'activity',
-  //       order: '-sys.createdAt',
-  //     }),
-  //   ])
-  //     .then(([activities]) => {
-  //       console.log(activities.items)
-  //       // return data that should be available
-  //       // in the template
-  //       return {
-  //         activities: activities.items,
-  //       }
-  //     })
-  //     .catch(console.error)
-  // },
 }
 </script>

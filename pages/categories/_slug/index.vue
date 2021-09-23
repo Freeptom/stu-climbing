@@ -1,7 +1,6 @@
 <template>
   <div class="page-component">
     <h1>Has category of {{ $route.params.slug }}</h1>
-
     <ActivitiesList :activity-items="activities" />
   </div>
 </template>
@@ -60,6 +59,7 @@ export default {
             categoryReferencesCollection {
               items {
                 categoryName
+                slug
               }
             }
           }
@@ -67,7 +67,6 @@ export default {
       }
     `
     const variables = { ids }
-
     const activities = await $graphql.default.request(getById, variables)
 
     return { activitiesFromCategory, activities }
