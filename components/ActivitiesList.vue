@@ -33,7 +33,7 @@ export default {
 
 <style scoped lang="scss">
 .articles {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;

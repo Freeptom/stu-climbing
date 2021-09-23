@@ -1,18 +1,19 @@
 <template>
   <div class="page-component">
-    {{ activitiesFromCategory }}
-    {{ getActivities }}
+    <h1>Has category of {{ $route.params.slug }}</h1>
+
+    <ActivitiesList :activity-items="activities" />
   </div>
 </template>
 
 <script>
 import { gql } from 'nuxt-graphql-request'
-// import Activity from '~/components/Activity.vue'
+import ActivitiesList from '~/components/ActivitiesList.vue'
 
 export default {
   name: 'Index',
   components: {
-    // Activity,
+    ActivitiesList,
   },
 
   async asyncData({ $graphql, params }) {
@@ -35,7 +36,6 @@ export default {
     `
     const ids = []
     const activitiesFromCategory = await $graphql.default.request(actByCat)
-    console.log(activitiesFromCategory)
     const idsGroup =
       activitiesFromCategory.categoryCollection.items[0].linkedFrom
         .activityCollection.items
@@ -43,12 +43,8 @@ export default {
     idsGroup.forEach((id) => ids.push(id.sys.id))
 
     const getById = gql`
-      query {
-        activityCollection(
-          where: {
-            sys: { id_in: ["1UG3IzwcFlFxTEdqQfisSU", "3r7elqOc3ahapygyHaoxfh"] }
-          }
-        ) {
+      query ($ids: [String]) {
+        activityCollection(where: { sys: { id_in: $ids } }) {
           items {
             text
             image {
@@ -70,9 +66,11 @@ export default {
         }
       }
     `
-    const getActivities = await $graphql.default.request(getById)
+    const variables = { ids }
 
-    return { activitiesFromCategory, getActivities }
+    const activities = await $graphql.default.request(getById, variables)
+
+    return { activitiesFromCategory, activities }
   },
 }
 </script>
