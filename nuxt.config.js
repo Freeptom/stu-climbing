@@ -5,7 +5,6 @@ export default {
 
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
-  ssr: false,
 
   env: {
     CTF_SPACE_ID: config.CTF_SPACE_ID,
