@@ -2,13 +2,11 @@
   <div class="navigation">
     <nav>
       <ul role="menu" class="articles">
-        <div
+        <Activity
           v-for="activity in activityItems.activityCollection.items"
           :key="activity.title"
-          class="article"
-        >
-          <Activity :activity="activity" />
-        </div>
+          :activity="activity"
+        />
       </ul>
     </nav>
   </div>
@@ -33,12 +31,11 @@ export default {
 
 <style scoped lang="scss">
 .articles {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
-  h2 {
-    min-height: 50px;
-  }
+  display: grid;
+  padding: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 1fr;
+  grid-gap: 1rem;
+  justify-items: center;
 }
 </style>
