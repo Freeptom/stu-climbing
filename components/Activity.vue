@@ -9,7 +9,6 @@
     </div>
     <div class="card__content">
       <h2 class="card__title">{{ activity.text }}</h2>
-      <!-- <button class="card__button">Learn more</button> -->
 
       <ul class="chips">
         <nuxt-link
@@ -83,9 +82,9 @@ export default {
   width: max-content;
   &::after {
     content: '';
-    height: 3px;
+    height: 4px;
     position: absolute;
-    left: calc(var(--padding) * -1);
+    left: calc(1rem * -1);
     bottom: 0;
     width: calc(100% + var(--padding));
     background: var(--clr-accent-400);
