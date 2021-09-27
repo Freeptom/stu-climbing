@@ -12,16 +12,18 @@
       <!-- <button class="card__button">Learn more</button> -->
 
       <ul class="chips">
-        <li
+        <nuxt-link
           v-for="(category, index) in activity.categoryReferencesCollection
             .items"
           :key="index"
           class="chip"
+          :to="'/categories/' + category.slug"
+          role="menuitem"
         >
-          <nuxt-link :to="'/categories/' + category.slug" role="menuitem">
+          <li>
             {{ category.categoryName }}
-          </nuxt-link>
-        </li>
+          </li>
+        </nuxt-link>
       </ul>
     </div>
   </div>
@@ -75,7 +77,7 @@ export default {
 }
 
 .card__title {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   position: relative;
   font-size: 1rem;
   width: max-content;
@@ -119,7 +121,7 @@ export default {
 
 @media (hover) {
   .card__content {
-    transform: translateY(40%);
+    transform: translateY(20%);
     transition: 500ms ease;
   }
   .card:hover .card__content,
@@ -163,21 +165,30 @@ export default {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  margin: 1rem 0;
+  margin: 0.5rem 0;
 }
 
 .chip {
+  text-transform: uppercase;
   display: inline-block;
-  font-size: 0.875rem;
+  font-size: 0.66rem;
   border-radius: 1.5rem;
+  border: 1px solid var(--clr-accent-400);
+  letter-spacing: 0.8px;
   padding: 0.25rem 1rem;
-  background-color: #eef1f3;
-  color: #5f6970;
+  color: var(--clr-accent-400);
   font-weight: 600;
   margin-right: 0.875rem;
+  text-decoration: none;
+  list-style: none;
   a {
     color: inherit;
     text-decoration: none;
+  }
+  // transition: 1;
+  &:hover {
+    background: var(--clr-accent-400);
+    color: var(--clr-neutral-900);
   }
 }
 </style>
