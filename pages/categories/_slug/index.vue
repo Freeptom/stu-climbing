@@ -1,6 +1,6 @@
 <template>
   <div class="page-component">
-    <h1>Has category of {{ $route.params.slug }}</h1>
+    <h1>Has {{ $route.params.slug }} category</h1>
     <ActivitiesList :activity-items="activities" />
   </div>
 </template>
@@ -75,6 +75,12 @@ export default {
 </script>
 
 <style scoped>
+h1 {
+  font-size: 0.8rem;
+  padding: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
 .margin-bottom {
   margin-bottom: 1rem;
 }
