@@ -1,4 +1,5 @@
 <template>
+  <!-- <div>{{ activity }}</div> -->
   <div class="card">
     <div class="card__thumb">
       <img
@@ -9,6 +10,7 @@
     </div>
     <div class="card__content">
       <h2 class="card__title">{{ activity.text }}</h2>
+      {{ activity.slug }}
 
       <ul class="chips">
         <nuxt-link

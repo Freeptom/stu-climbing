@@ -17,6 +17,7 @@ export default {
         activityCollection {
           items {
             text
+            slug
             image {
               title
               description

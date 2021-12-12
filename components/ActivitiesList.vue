@@ -2,7 +2,7 @@
   <div class="navigation">
     <nav>
       <ul role="menu" class="articles">
-        <Activity
+        <activity-card
           v-for="activity in activityItems.activityCollection.items"
           :key="activity.title"
           :activity="activity"
@@ -13,12 +13,12 @@
 </template>
 
 <script>
-import Activity from '~/components/Activity.vue'
+import ActivityCard from '~/components/ActivityCard.vue'
 
 export default {
   name: 'ActivitiesList',
   components: {
-    Activity,
+    ActivityCard,
   },
   props: {
     activityItems: {
