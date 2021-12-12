@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link :to="'/activity/' + activity.slug">
+  <nuxt-link class="activity-link" :to="'/activity/' + activity.slug">
     <div class="card">
       <div class="card__thumb">
         <img
@@ -10,7 +10,6 @@
       </div>
       <div class="card__content">
         <h2 class="card__title">{{ activity.text }}</h2>
-        {{ activity.slug }}
 
         <ul class="chips">
           <nuxt-link
@@ -43,6 +42,9 @@ export default {
 </script>
 
 <style lang="scss">
+.activity-link {
+  text-decoration: none;
+}
 .card {
   border-radius: 0.5rem;
   overflow: hidden;

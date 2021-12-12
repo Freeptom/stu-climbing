@@ -46,6 +46,7 @@ export default {
         activityCollection(where: { sys: { id_in: $ids } }) {
           items {
             text
+            slug
             image {
               title
               description

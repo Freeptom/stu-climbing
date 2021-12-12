@@ -10,8 +10,6 @@
     </div>
     <div class="card__content">
       <h2 class="card__title">{{ activity.text }}</h2>
-      {{ activity.slug }}
-
       <ul class="chips">
         <nuxt-link
           v-for="(category, index) in activity.categoryReferencesCollection
