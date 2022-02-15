@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <!-- <div>{{ activity }}</div> -->
   <div class="card">
     <div class="card__thumb">
@@ -39,8 +39,9 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .card {
+  height: 100%;
   border-radius: 0.5rem;
   overflow: hidden;
   color: var(--clr-neutral-100);
@@ -190,4 +191,4 @@ export default {
     color: var(--clr-neutral-900);
   }
 }
-</style>
+</style> -->

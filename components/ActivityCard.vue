@@ -46,6 +46,7 @@ export default {
   text-decoration: none;
 }
 .card {
+  height: 100%;
   border-radius: 0.5rem;
   overflow: hidden;
   color: var(--clr-neutral-100);
@@ -182,7 +183,8 @@ export default {
   padding: 0.25rem 1rem;
   color: var(--clr-accent-400);
   font-weight: 600;
-  margin-right: 0.875rem;
+  margin: 0 0.875rem 0.875rem 0;
+  margin-bottom: 1rem;
   text-decoration: none;
   list-style: none;
   a {
