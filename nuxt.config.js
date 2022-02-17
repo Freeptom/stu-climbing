@@ -1,16 +1,14 @@
-import config from './.contentful.json'
-
 export default {
-  publicRuntimeConfig: {},
+  publicRuntimeConfig: {
+    CTF_SPACE_ID: process.env.CTF_SPACE_ID || 'vlkuc5e6h3ku',
+    CTF_CDA_ACCESS_TOKEN:
+      process.env.CTF_CDA_ACCESS_TOKEN ||
+      '-Su1tjxF-qpNwC97V3moe00qishyE4Q0z6Wwmk0jYyM',
+    CTF_ENVIRONMENT: 'master',
+  },
 
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
-
-  env: {
-    CTF_SPACE_ID: config.CTF_SPACE_ID,
-    CTF_CDA_ACCESS_TOKEN: config.CTF_CDA_ACCESS_TOKEN,
-    CTF_ENVIRONMENT: config.CTF_ENVIRONMENT,
-  },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
