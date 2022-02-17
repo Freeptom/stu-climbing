@@ -1,4 +1,4 @@
-<!-- <template>
+<template>
   <!-- <div>{{ activity }}</div> -->
   <div class="card">
     <div class="card__thumb">
@@ -191,4 +191,5 @@ export default {
     color: var(--clr-neutral-900);
   }
 }
-</style> -->
+</style>
+-->
