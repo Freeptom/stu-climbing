@@ -3,7 +3,7 @@
     <h4>Raw data</h4>
     <!-- <textarea v-model="postToString" style="width: 100%; height: 400px">
     </textarea> -->
-    <ul style="list-style: none; margin: 0px; padding: 0px">
+    <ul class="posts">
       <li v-for="post in posts.data" :key="post.id" style="color: white">
         <template
           v-if="
@@ -17,11 +17,11 @@
             <source :src="post.media_url" />
           </video>
         </template>
-        <div>
-          <b>Caption {{ post.caption }}</b>
-          <p>Caption {{ post.id }}</p>
+        <div style="max-width: 320px">
+          <b>{{ truncate(post.caption) }}</b>
+          <!-- <p>ID {{ post.id }}</p>
           <p>Media Type {{ post.media_type }}</p>
-          <p>Media URL {{ post.media_url }}</p>
+          <p>Media URL {{ post.media_url }}</p> -->
         </div>
       </li>
     </ul>
@@ -37,5 +37,24 @@ export default {
     const postToString = JSON.stringify(posts, undefined, 4)
     return { posts, postToString }
   },
+
+  methods: {
+    truncate(input) {
+      return input.length > 200 ? `${input.substring(0, 200)}...` : input
+    },
+  },
 }
 </script>
+
+<style scoped lang="scss">
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0px;
+  gap: 4rem;
+  max-width: 1200px;
+}
+</style>
