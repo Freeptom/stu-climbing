@@ -1,0 +1,9 @@
+.app-logo {
+  color: white;
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  &__mark {
+    margin-top: 6px;
+  }
+}

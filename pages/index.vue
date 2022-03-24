@@ -1,45 +1,16 @@
 <template>
-  <section class="container">
-    <ActivitiesList :activity-items="activities" />
-  </section>
+  <div>
+    <app-nav />
+  </div>
 </template>
+
 <script>
-import { gql } from 'nuxt-graphql-request'
-import ActivitiesList from '~/components/ActivitiesList.vue'
+import AppNav from '~/components/LandingPage/AppNav.vue'
 
 export default {
+  name: 'Home',
   components: {
-    ActivitiesList,
-  },
-  async asyncData({ $graphql }) {
-    const query = gql`
-      query {
-        activityCollection {
-          items {
-            text
-            slug
-            image {
-              title
-              description
-              contentType
-              fileName
-              size
-              url
-              width
-              height
-            }
-            categoryReferencesCollection {
-              items {
-                categoryName
-                slug
-              }
-            }
-          }
-        }
-      }
-    `
-    const activities = await $graphql.default.request(query)
-    return { activities }
+    AppNav,
   },
 }
 </script>
