@@ -1,15 +1,15 @@
 <template>
-  <div class="page-component">
-    <activity-view :activity="activity.activityCollection.items[0]" />
+  <div>
+    <activity :activity="activity.activityCollection.items[0]" />
   </div>
 </template>
 
 <script>
 import { gql } from 'nuxt-graphql-request'
-import ActivityView from '@/components/ActivityView.vue'
+import Activity from '~/components/Activity.vue'
 export default {
   name: 'Index',
-  components: { ActivityView },
+  components: { Activity },
 
   async asyncData({ $graphql, params }) {
     const actBySlug = gql`
@@ -43,15 +43,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-h1 {
-  font-size: 0.8rem;
-  padding: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-.margin-bottom {
-  margin-bottom: 1rem;
-}
-</style>
