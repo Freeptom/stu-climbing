@@ -1,11 +1,11 @@
 <template>
-  <nav class="landing-nav">
+  <nav class="landing-nav max-container">
     <app-logo />
   </nav>
 </template>
 
 <script>
-import AppLogo from '~/components/LandingPage/AppLogo.vue'
+import AppLogo from '~/components/layout/AppLogo.vue'
 
 export default {
   name: 'AppNav',

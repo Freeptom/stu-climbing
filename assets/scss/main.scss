@@ -2,11 +2,13 @@
 @import './general';
 @import './fonts';
 @import './reset';
+@import './variables';
+@import './layouts/landing-page';
 
 //components
 @import './components/activity-card';
 @import './components/activity-list';
 @import './components/app-logo';
 @import './components/app-nav';
+@import './components/app-button';
 @import './components/app-cta';
-@import './layouts/default';

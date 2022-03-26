@@ -1,7 +1,20 @@
-.byline {
+.cta__byline {
   color: #909090;
   font-family: 'Roboto';
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 400;
+  font-size: 0.75rem;
+}
+
+.cta__body {
+  font-family: 'Gaspar';
+  max-width: 18ch;
+  font-size: 3.375rem;
+  color: white;
+  font-weight: 400;
+  line-height: 3.875rem;
+  &--alt {
+    color: var(--clr-primary-400);
+  }
 }
