@@ -1,4 +1,4 @@
 export const instaDetails = {
   RootUrl: `https://graph.instagram.com`,
-  UserId: `17841401607721888`,
+  UserId: `17841400670500513`,
 }
