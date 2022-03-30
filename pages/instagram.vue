@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h4>Raw data</h4>
+    <!-- <h4>Raw data</h4> -->
     <!-- <textarea v-model="postToString" style="width: 100%; height: 400px">
     </textarea> -->
     <ul class="posts">
@@ -13,12 +13,12 @@
           <img style="height: 320px" :src="post.media_url" />
         </template>
         <template v-else>
-          <video style="height: 240px; width: 320px" controls>
+          <video style="height: 320px; width: 320px" controls>
             <source :src="post.media_url" />
           </video>
         </template>
         <div style="max-width: 320px">
-          <b>{{ truncate(post.caption) }}</b>
+          <p>{{ truncate(post.caption) }}</p>
           <!-- <p>ID {{ post.id }}</p>
           <p>Media Type {{ post.media_type }}</p>
           <p>Media URL {{ post.media_url }}</p> -->
