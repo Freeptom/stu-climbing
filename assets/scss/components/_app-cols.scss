@@ -1,0 +1,15 @@
+.app-cols {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 6rem;
+  @media screen and (min-width: $lg) {
+    flex-direction: row;
+  }
+  & > * {
+    flex: 1 1 auto;
+  }
+  &__img {
+    flex: 0 0 25%;
+  }
+}

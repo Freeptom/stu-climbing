@@ -1,8 +1,8 @@
 // general
+@import './variables';
 @import './general';
 @import './fonts';
 @import './reset';
-@import './variables';
 @import './layouts/landing-page';
 
 //components
@@ -12,3 +12,6 @@
 @import './components/app-nav';
 @import './components/app-button';
 @import './components/app-cta';
+@import './components/app-cols';
+@import './components/app-section';
+@import './components/app-list';

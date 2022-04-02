@@ -1,5 +1,5 @@
 <template>
-  <app-section>
+  <app-section class="section section--intro">
     <app-cta>
       <template #byline>A rock climbing instructor and mountaineer</template>
       <template #body
