@@ -1,10 +1,13 @@
 export default {
   publicRuntimeConfig: {
-    CTF_SPACE_ID: process.env.CTF_SPACE_ID || 'vlkuc5e6h3ku',
-    CTF_CDA_ACCESS_TOKEN:
+    ctfSpaceId: process.env.CTF_SPACE_ID || 'vlkuc5e6h3ku',
+    ctfCdaAccessToken:
       process.env.CTF_CDA_ACCESS_TOKEN ||
       '-Su1tjxF-qpNwC97V3moe00qishyE4Q0z6Wwmk0jYyM',
-    CTF_ENVIRONMENT: 'master',
+    ctfEnvironment: 'master',
+  },
+  privateRuntimeConfig: {
+    inToken: process.env.IN_TOKEN,
   },
 
   // Target: https://go.nuxtjs.dev/config-target
@@ -26,9 +29,10 @@ export default {
   },
 
   css: ['@/assets/scss/main'],
-
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
+
+  modules: ['@nuxtjs/axios'],
 
   // // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
