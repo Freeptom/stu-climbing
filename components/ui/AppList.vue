@@ -1,9 +1,9 @@
 <template>
   <div>
-    <template v-if="title">
-      <h2 class="app-list-title">{{ title }}</h2>
-      <hr class="app-title-line" />
-    </template>
+    <div v-if="title" class="app-list-header">
+      <h2 class="app-list-header__title">{{ title }}</h2>
+      <hr class="app-list-header__title-decoration" />
+    </div>
     <ul class="app-list">
       <li v-for="item in items" :key="item.message">{{ item.message }}</li>
     </ul>

@@ -1,7 +1,6 @@
 .landing-nav {
   margin-bottom: 8rem;
-  @media screen and (min-width: 780px) {
+  @media screen and (min-width: $lg) {
     padding-top: 3rem;
-    margin-bottom: 12rem;
   }
 }

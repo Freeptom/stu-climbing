@@ -1,7 +1,7 @@
 <template>
   <div class="cta">
     <app-byline><slot name="byline"></slot></app-byline>
-    <p class="cta__body"><slot name="body"></slot></p>
+    <div class="cta__body"><slot name="body"></slot></div>
     <app-button>Contact Now</app-button>
   </div>
 </template>

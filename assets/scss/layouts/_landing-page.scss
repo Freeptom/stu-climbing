@@ -3,6 +3,9 @@
   background-position: top right;
   background-repeat: no-repeat;
   min-height: 100vh;
-  background-size: 80vw auto;
+  background-size: clamp(41rem, 80vw, 90%), auto;
   padding: 2rem;
+  @media screen and (min-width: $xl) {
+    padding: 2rem 12rem;
+  }
 }

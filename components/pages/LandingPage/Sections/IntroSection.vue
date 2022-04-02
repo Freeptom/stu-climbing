@@ -1,10 +1,11 @@
 <template>
   <app-section class="section section--intro">
-    <app-cta>
+    <app-cta class="cta--main">
       <template #byline>A rock climbing instructor and mountaineer</template>
       <template #body
-        >Reach <span class="cta__body--alt">new heights</span> with
-        Stu</template
+        ><h1>
+          Reach <span class="cta__body--alt">new heights</span> with Stu
+        </h1></template
       >
     </app-cta>
   </app-section>
@@ -21,5 +22,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss" scoped></style>

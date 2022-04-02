@@ -1,5 +1,10 @@
 .section {
   &--intro {
-    height: 75vh;
+    min-height: 50vh;
+    position: relative;
+    margin-bottom: 14rem;
+    @media screen and (min-width: $lg) {
+      margin-bottom: 28rem;
+    }
   }
 }

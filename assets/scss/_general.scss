@@ -5,7 +5,6 @@ body {
   line-height: 1.5;
   background: var(--clr-neutral-900);
   color: white;
-  height: 100%;
 }
 
 a {
@@ -13,6 +12,7 @@ a {
 }
 
 h1 {
+  font-size: var(--step--4);
   color: white;
 }
 

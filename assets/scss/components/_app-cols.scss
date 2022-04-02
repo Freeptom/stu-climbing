@@ -1,8 +1,8 @@
 .app-cols {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   justify-content: space-between;
-  gap: 6rem;
+  grid-gap: 2rem 4rem;
   @media screen and (min-width: $lg) {
     flex-direction: row;
   }
@@ -10,6 +10,9 @@
     flex: 1 1 auto;
   }
   &__img {
-    flex: 0 0 25%;
+    flex: 0 0 10rem;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
   }
 }

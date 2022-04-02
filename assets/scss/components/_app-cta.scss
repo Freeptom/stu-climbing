@@ -9,17 +9,28 @@
 }
 
 .cta__body {
-  font-family: 'Gaspar';
-  max-width: 18ch;
-  margin-bottom: 1.75rem;
-  font-size: var(--step-4);
-  color: white;
-  font-weight: 400;
-  line-height: 1;
-  @media screen and (min-width: $xl) {
-    line-height: 0.9;
+  & > * {
+    font-family: 'Gaspar';
+    max-width: 18ch;
+    margin-bottom: 1.75rem;
+    font-size: var(--step-4);
+    color: white;
+    font-weight: 400;
+    line-height: 1.2;
+    @media screen and (min-width: $xl) {
+      line-height: 1;
+    }
   }
   &--alt {
     color: var(--clr-primary-400);
+  }
+}
+
+.cta--main {
+  position: absolute;
+  top: 60%;
+  left: 0;
+  @media screen and (min-width: $lg) {
+    top: 40%;
   }
 }
