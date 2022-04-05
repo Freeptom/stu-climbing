@@ -2,7 +2,7 @@
   <div class="cta">
     <app-byline><slot name="byline"></slot></app-byline>
     <div class="cta__body"><slot name="body"></slot></div>
-    <app-button>Contact Now</app-button>
+    <app-button>Contact Now &#10141;</app-button>
   </div>
 </template>
 

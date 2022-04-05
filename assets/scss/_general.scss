@@ -11,6 +11,11 @@ a {
   color: white;
 }
 
+span.standout {
+  color: var(--clr-primary-400);
+  font-weight: 700;
+}
+
 h1 {
   font-size: var(--step--4);
   color: white;
