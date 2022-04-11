@@ -1,5 +1,10 @@
 <template>
-  <component :is="type" :href="href" class="button">
+  <component
+    :is="type"
+    :href="href"
+    class="button"
+    :class="{ 'button--alt': alt }"
+  >
     <slot />
   </component>
 </template>
@@ -14,6 +19,10 @@ export default {
     to: {
       type: String,
       default: null,
+    },
+    alt: {
+      type: Boolean,
+      default: false,
     },
   },
   computed: {

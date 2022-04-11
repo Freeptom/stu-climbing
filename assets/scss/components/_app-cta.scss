@@ -4,7 +4,7 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 400;
-  font-size: var(--step--3);
+  font-size: var(--font-size-sm);
   margin-bottom: 1rem;
 }
 
@@ -13,12 +13,22 @@
     font-family: 'Gaspar';
     max-width: 18ch;
     margin-bottom: 1.75rem;
-    font-size: var(--step-4);
+    font-size: var(--font-size-xl);
     color: white;
     font-weight: 400;
     line-height: 1.2;
-    @media screen and (min-width: $xl) {
+    @media screen and (min-width: $sm) {
       line-height: 1;
+    }
+  }
+  &--main {
+    & > * {
+      font-size: var(--font-size-xxl);
+    }
+  }
+  &--on-light {
+    & > * {
+      color: var(--clr-neutral-900);
     }
   }
   &--alt {
@@ -29,8 +39,30 @@
 .cta--main {
   position: absolute;
   top: 60%;
-  left: 0;
+  left: 2rem;
   @media screen and (min-width: $lg) {
     top: 40%;
+    left: 0;
+  }
+}
+
+// **** CTA BLOCK **** //
+
+.cta-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 263.75rem;
+  &__title {
+    font-size: var(--font-size-md);
+  }
+  &__body {
+    & > * {
+      font-family: 'Roboto';
+      margin-bottom: 1.75rem;
+      font-size: var(--font-size-base);
+      color: #909090;
+    }
   }
 }

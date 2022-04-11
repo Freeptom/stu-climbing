@@ -1,20 +1,24 @@
-<template v-if="isBlock">
-  <div class="cta-block">
-    <app-byline><slot name="title"></slot></app-byline>
+<template>
+  <div v-if="isBlock" class="cta-block">
+    <h2 class="cta-block__title"><slot name="title"></slot></h2>
     <div class="cta-block__body">
       <slot name="body"></slot>
     </div>
-    <app-button><slot name="cta">Contact Now</slot></app-button>
-  </div>
-</template>
 
-<template v-else>
-  <div class="cta" :class="{ 'cta--main': isMain }">
+    <app-button v-if="!hideCta" alt
+      ><slot name="cta">Contact Now</slot></app-button
+    >
+  </div>
+
+  <div v-else class="cta" :class="{ 'cta--main': isMain }">
     <app-byline><slot name="byline"></slot></app-byline>
-    <div class="cta__body">
+    <div
+      class="cta__body"
+      :class="{ 'cta__body--on-light': onLight, 'cta__body--main': isMain }"
+    >
       <slot name="body"></slot>
     </div>
-    <app-button><slot name="cta">Contact Now</slot></app-button>
+    <app-button v-if="!hideCta"><slot name="cta">Contact Now</slot></app-button>
   </div>
 </template>
 
@@ -30,6 +34,14 @@ export default {
       default: false,
     },
     isBlock: {
+      type: Boolean,
+      default: false,
+    },
+    hideCta: {
+      type: Boolean,
+      default: false,
+    },
+    onLight: {
       type: Boolean,
       default: false,
     },

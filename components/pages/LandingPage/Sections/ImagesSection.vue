@@ -1,8 +1,8 @@
 <template>
-  <app-section>
-    <app-cta is-block>
-      <template #title>block title</template>
-      <template #body><p>test test</p></template>
+  <app-section on-light>
+    <app-cta hide-cta on-light>
+      <template #byline>From the feed</template>
+      <template #body><p>Where to next?</p></template>
     </app-cta>
   </app-section>
 </template>

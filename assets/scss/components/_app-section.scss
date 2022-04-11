@@ -1,4 +1,12 @@
 .section {
+  margin-bottom: 12rem;
+  padding: 2rem;
+  @media screen and (min-width: $xl) {
+    padding: 2rem 0rem;
+  }
+  &--light-bg {
+    background-color: white;
+  }
   &--intro {
     min-height: 50vh;
     position: relative;

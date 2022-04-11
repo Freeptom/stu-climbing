@@ -19,11 +19,11 @@ a {
 }
 
 h1 {
-  font-size: var(--step--4);
+  font-size: var(--font-size-xl);
   color: white;
 }
 
 .max-container {
-  max-width: $xl;
+  max-width: $lg;
   margin: 0 auto;
 }

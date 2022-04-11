@@ -4,6 +4,7 @@
     <intro-section />
     <about-section />
     <images-section />
+    <cta-section />
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import AppNav from '~/components/layout/AppNav'
 import IntroSection from '~/components/pages/LandingPage/Sections/IntroSection'
 import AboutSection from '~/components/pages/LandingPage/Sections/AboutSection'
 import ImagesSection from '~/components/pages/LandingPage/Sections/ImagesSection'
+import CtaSection from '~/components/pages/LandingPage/Sections/CtaSection'
 
 export default {
   name: 'Home',
@@ -20,6 +22,7 @@ export default {
     IntroSection,
     AboutSection,
     ImagesSection,
+    CtaSection,
   },
   layout: 'landing-page',
 }

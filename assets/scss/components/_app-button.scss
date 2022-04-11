@@ -4,9 +4,18 @@
   text-transform: uppercase;
   border: 1px solid var(--clr-primary-400);
   background: var(--clr-primary-400);
-  font-size: var(--step--3);
+  font-size: var(--font-size-sm);
   letter-spacing: 2px;
   font-weight: 500;
   vertical-align: middle;
   cursor: pointer;
+  &--alt {
+    background: transparent;
+    color: var(--clr-primary-400);
+    transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+    &:hover {
+      background: var(--clr-primary-400);
+      color: white;
+    }
+  }
 }
