@@ -3,6 +3,7 @@
     <app-nav />
     <intro-section />
     <about-section />
+    <images-section />
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import AppNav from '~/components/layout/AppNav'
 import IntroSection from '~/components/pages/LandingPage/Sections/IntroSection'
 import AboutSection from '~/components/pages/LandingPage/Sections/AboutSection'
+import ImagesSection from '~/components/pages/LandingPage/Sections/ImagesSection'
 
 export default {
   name: 'Home',
@@ -17,6 +19,7 @@ export default {
     AppNav,
     IntroSection,
     AboutSection,
+    ImagesSection,
   },
   layout: 'landing-page',
 }

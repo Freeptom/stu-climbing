@@ -1,5 +1,5 @@
 <template>
-  <section :class="{ 'max-container': hasMaxWidth }">
+  <section class="section" :class="{ 'max-container': hasMaxWidth }">
     <slot></slot>
   </section>
 </template>

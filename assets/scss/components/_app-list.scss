@@ -1,7 +1,13 @@
 .app-list-header {
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 0.5rem 1rem;
   align-items: center;
+  margin-bottom: 1.25rem;
+  @media screen and (min-width: $lg) {
+    flex-direction: row;
+    margin-bottom: 1.5rem;
+  }
   &__title {
     font-size: var(--step-3);
     font-family: 'Gaspar';
@@ -13,7 +19,14 @@
     display: block;
     background-color: var(--clr-primary-400);
     border: none;
-    min-width: 146px;
+    min-width: 98px;
     height: 2px;
+  }
+}
+
+.app-list {
+  list-style-type: disc;
+  li {
+    margin-bottom: 1rem;
   }
 }

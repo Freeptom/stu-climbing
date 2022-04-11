@@ -6,7 +6,7 @@
         src="~/assets/images/stu-climbing.png"
         alt="Stu passing rope down to help a climber below him"
       />
-      <app-list title="A little about Stu" :intro="intro" :items="about" />
+      <app-list title="How Stu can help you" :intro="intro" :items="about" />
     </app-cols>
   </app-section>
 </template>
@@ -24,18 +24,20 @@ export default {
   },
   data() {
     return {
-      intro: `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <span class="standout">Nec id quam</span> ornare dictum risus, massa nunc rutrum. Iaculis varius sed feugiat at. Nisi vitae eu, etiam magna <span class="standout">ornare dictum risus</span> ornare mattis. Tempor, interdum aenean phasellus <span class="standout">tortor donec</span> quam venenatis volutpat.</p>`,
+      intro: `<p>Lorem ipsum dolor, consectetur adipiscing elit. <span class="standout standout--bold">Nec id quam</span> Nisi vitae eu, etiam magna <span class="standout standout--bold">ornare dictum risus</span> ornare mattis.Quam venenatis volutpat.</p>`,
 
       about: [
         {
-          message: `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <span class="standout">Nec id quam</span> ornare dictum risus, massa nunc rutrum. Iaculis varius sed feugiat at. Nisi vitae eu, etiam magna <span class="standout">ornare dictum risus</span> ornare mattis. Tempor, interdum aenean phasellus <span class="standout">tortor donec</span> quam venenatis volutpat.</p>`,
+          message: `<p>Consectetur adipiscing elit. <span class="standout standout--bold">Nec id quam</span> ornare dictum risus. Nisi vitae eu, etiam magna <span class="standout standout--bold">ornare dictum risus</span>.<span class="standout standout--bold">tortor donec</span> quam venenatis volutpat.</p>`,
         },
-        { message: `<h1>test2</h1>` },
-        { message: `test3` },
+        {
+          message: `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis varius sed feugiat at. Etiam magna <span class="standout standout--bold">ornare dictum risus</span> ornare mattis.</p>`,
+        },
+        {
+          message: `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  ornare dictum risus, massa nunc rutrum. Etiam magna <span class="standout standout--bold">ornare dictum risus</span> ornare mattis.`,
+        },
       ],
     }
   },
 }
 </script>
-
-<style lang="scss" scoped></style>

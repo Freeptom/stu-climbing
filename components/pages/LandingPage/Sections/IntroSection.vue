@@ -1,12 +1,13 @@
 <template>
-  <app-section class="section section--intro">
-    <app-cta class="cta--main">
+  <app-section class="section--intro">
+    <app-cta is-main>
       <template #byline>A rock climbing instructor and mountaineer</template>
       <template #body
         ><h1>
-          Reach <span class="cta__body--alt">new heights</span> with Stu
+          Reach <span class="standout">new heights</span> with Stu
         </h1></template
       >
+      <template #cta>Contact Now &#10141;</template>
     </app-cta>
   </app-section>
 </template>
