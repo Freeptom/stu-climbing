@@ -5,7 +5,7 @@
       <slot name="body"></slot>
     </div>
 
-    <app-button v-if="!hideCta" alt
+    <app-button v-if="!hideButton" alt
       ><slot name="cta">Contact Now</slot></app-button
     >
   </div>
@@ -18,7 +18,9 @@
     >
       <slot name="body"></slot>
     </div>
-    <app-button v-if="!hideCta"><slot name="cta">Contact Now</slot></app-button>
+    <app-button v-if="!hideButton"
+      ><slot name="cta">Contact Now</slot></app-button
+    >
   </div>
 </template>
 
@@ -37,7 +39,7 @@ export default {
       type: Boolean,
       default: false,
     },
-    hideCta: {
+    hideButton: {
       type: Boolean,
       default: false,
     },

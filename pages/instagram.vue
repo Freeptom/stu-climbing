@@ -19,9 +19,6 @@
         </template>
         <div style="max-width: 320px">
           <p>{{ truncate(post.caption) }}</p>
-          <!-- <p>ID {{ post.id }}</p>
-          <p>Media Type {{ post.media_type }}</p>
-          <p>Media URL {{ post.media_url }}</p> -->
         </div>
       </li>
     </ul>

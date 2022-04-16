@@ -10,10 +10,10 @@
 
 <script>
 import AppNav from '~/components/layout/AppNav'
-import IntroSection from '~/components/pages/LandingPage/Sections/IntroSection'
-import AboutSection from '~/components/pages/LandingPage/Sections/AboutSection'
-import ImagesSection from '~/components/pages/LandingPage/Sections/ImagesSection'
-import CtaSection from '~/components/pages/LandingPage/Sections/CtaSection'
+import IntroSection from '~/pages/landingPage/Sections/IntroSection'
+import AboutSection from '~/pages/landingPage/Sections/AboutSection'
+import ImagesSection from '~/pages/landingPage/Sections/ImagesSection'
+import CtaSection from '~/pages/landingPage/Sections/CtaSection'
 
 export default {
   name: 'Home',

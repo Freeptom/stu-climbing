@@ -1,0 +1,12 @@
+.image-reel {
+  padding-top: 8.75rem;
+}
+
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  &__card {
+    display: inline-block;
+  }
+}

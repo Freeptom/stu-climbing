@@ -1,7 +1,7 @@
 <template>
   <section
     class="section"
-    :class="{ 'max-container': hasMaxWidth, 'section--light-bg': onLight }"
+    :class="{ 'max-container': !fullWidth, 'section--light-bg': onLight }"
   >
     <slot></slot>
   </section>
@@ -11,8 +11,8 @@
 export default {
   name: 'AppSection',
   props: {
-    hasMaxWidth: {
-      default: true,
+    fullWidth: {
+      default: false,
       type: Boolean,
     },
     onLight: {
