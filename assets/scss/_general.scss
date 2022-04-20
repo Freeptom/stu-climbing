@@ -27,3 +27,9 @@ h1 {
   max-width: $lg;
   margin: 0 auto;
 }
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
