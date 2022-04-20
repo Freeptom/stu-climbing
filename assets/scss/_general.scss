@@ -23,13 +23,15 @@ h1 {
   color: white;
 }
 
+:where(img, svg, video) {
+  block-size: auto;
+  max-inline-size: 100%;
+}
+
 .max-container {
   max-width: $lg;
   margin: 0 auto;
-}
-
-.row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  &--right-bleed {
+    margin: 0 0 0 auto;
+  }
 }

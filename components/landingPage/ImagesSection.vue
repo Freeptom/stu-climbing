@@ -1,29 +1,17 @@
 <template>
-  <app-section on-light full-width>
-    <div class="max-container image-reel row">
+  <app-section on-light full-width right-bleed>
+    <div class="max-container image-section">
       <app-cta hide-button on-light>
         <template #byline>From the feed</template>
         <template #body><p>Where to next?</p></template>
       </app-cta>
-      <ul class="scrolling-wrapper">
+      <ul class="media-scroller snaps-inline">
         <div
-          v-for="post in posts.data"
+          v-for="post in imagePosts"
           :key="post.id"
-          class="scrolling-wrapper__card"
+          class="media-scroller__element"
         >
-          <template
-            v-if="
-              post.media_type === 'IMAGE' ||
-              post.media_type === 'CAROUSEL_ALBUM'
-            "
-          >
-            <img style="height: 240px; width: 240px" :src="post.media_url" />
-          </template>
-          <template v-else>
-            <video style="height: 240px; width: 240px" controls>
-              <source :src="post.media_url" />
-            </video>
-          </template>
+          <img :src="post.media_url" height="120" width="120" />
         </div>
       </ul>
     </div>
@@ -41,10 +29,17 @@ export default {
   },
   props: {
     posts: {
-      type: Array,
+      type: Object,
       default() {
-        return []
+        return {}
       },
+    },
+  },
+  computed: {
+    imagePosts() {
+      return this.posts.data.filter((el) => {
+        return el.media_type === 'IMAGE' || el.media_type === 'CAROUSEL_ALBUM'
+      })
     },
   },
 }
