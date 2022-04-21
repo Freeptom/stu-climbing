@@ -2,7 +2,7 @@
   <section
     class="section"
     :class="{
-      'max-container': !fullWidth,
+      'full-bleed': fullBleed,
       'section--light-bg': onLight,
       'section--right-bleed': rightBleed,
     }"
@@ -15,7 +15,7 @@
 export default {
   name: 'AppSection',
   props: {
-    fullWidth: {
+    fullBleed: {
       default: false,
       type: Boolean,
     },

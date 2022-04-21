@@ -1,11 +1,11 @@
 <template>
-  <app-section on-light full-width right-bleed>
-    <div class="max-container image-section">
+  <app-section on-light full-bleed right-bleed>
+    <div class="image-section wrapper">
       <app-cta hide-button on-light>
         <template #byline>From the feed</template>
         <template #body><p>Where to next?</p></template>
       </app-cta>
-      <ul class="media-scroller snaps-inline">
+      <ul class="media-scroller snaps-inline full-bleed">
         <div
           v-for="post in imagePosts"
           :key="post.id"

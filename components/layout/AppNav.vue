@@ -1,5 +1,5 @@
 <template>
-  <nav class="landing-nav max-container">
+  <nav class="landing-nav">
     <app-logo />
   </nav>
 </template>

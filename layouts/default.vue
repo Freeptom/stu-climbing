@@ -1,5 +1,5 @@
 <template>
-  <div class="max-container">
+  <div class="wrapper">
     <nuxt />
   </div>
 </template>

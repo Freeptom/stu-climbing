@@ -1,5 +1,5 @@
 <template>
-  <div class="landing-bg">
+  <div class="landing-bg wrapper">
     <app-nav />
     <intro-section />
     <about-section />
