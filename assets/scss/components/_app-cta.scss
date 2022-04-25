@@ -48,20 +48,25 @@
 // **** CTA BLOCK **** //
 
 .cta-block {
+  background: var(--clr-neutral-900);
+  max-width: $lg;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 263.75rem;
+  gap: 1rem;
+  padding: 5rem 2.5rem;
+  margin: 0 auto;
   &__title {
     font-size: var(--font-size-md);
+    text-align: center;
   }
   &__body {
     & > * {
       font-family: 'Roboto';
-      margin-bottom: 1.75rem;
       font-size: var(--font-size-base);
       color: #909090;
+      margin-bottom: 0.5rem;
     }
   }
 }

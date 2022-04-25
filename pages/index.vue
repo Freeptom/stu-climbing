@@ -4,7 +4,7 @@
     <intro-section />
     <about-section />
     <images-section :posts="posts" />
-    <!-- <cta-section /> -->
+    <cta-section />
   </div>
 </template>
 
@@ -13,7 +13,7 @@ import AppNav from '~/components/layout/AppNav'
 import IntroSection from '~/components/landingPage/IntroSection'
 import AboutSection from '~/components/landingPage/AboutSection'
 import ImagesSection from '~/components/landingPage/ImagesSection'
-// import CtaSection from '~/components/landingPage/CtaSection'
+import CtaSection from '~/components/landingPage/CtaSection'
 import { instaDetails } from '~/static/insta'
 
 export default {
@@ -23,7 +23,7 @@ export default {
     IntroSection,
     AboutSection,
     ImagesSection,
-    // CtaSection,
+    CtaSection,
   },
   layout: 'landing-page',
   async asyncData({ $config: { inToken }, $axios }) {

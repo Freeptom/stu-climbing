@@ -1,5 +1,5 @@
 <template>
-  <app-section>
+  <app-section on-light full-bleed>
     <app-cta is-block>
       <template #title
         >Lorem ipsum dolor sit amet,

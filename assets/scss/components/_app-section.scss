@@ -1,5 +1,8 @@
 .section {
-  margin-bottom: 12rem;
+  --margin-bottom: 8rem;
+  @media screen and (min-width: $lg) {
+    --margin-bottom: 12rem;
+  }
 
   &--light-bg {
     background-color: white;
@@ -7,10 +10,13 @@
   &--intro {
     min-height: 50vh;
     position: relative;
-    margin-bottom: 14rem;
     @media screen and (min-width: $lg) {
       margin-bottom: 28rem;
     }
+  }
+  &--intro,
+  &--about {
+    margin-bottom: var(--margin-bottom);
   }
   &--right-bleed {
     padding-right: 0;

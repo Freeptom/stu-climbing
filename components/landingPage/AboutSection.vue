@@ -1,5 +1,5 @@
 <template>
-  <app-section>
+  <app-section class="section--about">
     <app-cols>
       <img
         class="app-cols__img"
