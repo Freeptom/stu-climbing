@@ -1,4 +1,5 @@
 .image-section {
+  overflow: scroll;
   padding: 8.75rem 0;
   gap: 1rem 3rem;
   @media screen and (min-width: $lg) {
