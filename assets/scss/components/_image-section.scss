@@ -1,6 +1,6 @@
 .image-container {
   overflow: hidden;
-  padding: 8.75rem 0;
+  padding-bottom: calc(var(--image-section-padding) / 2);
   gap: 1rem 3rem;
   @media screen and (min-width: $lg) {
     flex-direction: row;
@@ -21,7 +21,10 @@
   grid-column: 2 / -1;
   gap: 1rem;
   grid-auto-flow: column;
-  grid-auto-columns: 21%;
+  grid-auto-columns: 34%;
+  @media screen and (min-width: $md) {
+    grid-auto-columns: 21%;
+  }
   overflow-x: scroll;
   overscroll-behavior-inline: contain;
   margin: 0;

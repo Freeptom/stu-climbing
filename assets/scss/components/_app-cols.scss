@@ -3,6 +3,7 @@
   flex-direction: column-reverse;
   justify-content: space-between;
   grid-gap: 2rem 4rem;
+  align-items: center;
   @media screen and (min-width: $lg) {
     flex-direction: row;
   }

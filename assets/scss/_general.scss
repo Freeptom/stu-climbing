@@ -18,6 +18,11 @@ a {
   }
 }
 
+.white-bg {
+  background: white;
+  padding: var(--image-section-padding) 0;
+}
+
 h1 {
   font-size: var(--font-size-xl);
   color: white;

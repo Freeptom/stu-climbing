@@ -3,8 +3,10 @@
     <app-nav />
     <intro-section />
     <about-section />
-    <images-section :posts="posts" />
-    <cta-section />
+    <div class="white-bg full-bleed">
+      <images-section :posts="posts" />
+      <cta-section />
+    </div>
   </div>
 </template>
 
