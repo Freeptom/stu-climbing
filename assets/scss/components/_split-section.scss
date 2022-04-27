@@ -8,10 +8,13 @@
   }
   &__content {
     background: var(--clr-primary-400);
-    font-size: var(--font-size-md);
     padding: 4rem 2rem;
     font-family: 'Gaspar';
     height: 100%;
+    font-size: var(--font-size-base);
+    @media screen and (min-width: $lg) {
+      font-size: var(--font-size-md);
+    }
     p {
       margin-bottom: 1rem;
     }
