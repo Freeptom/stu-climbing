@@ -7,6 +7,7 @@
       <images-section :posts="posts" />
       <cta-section />
     </div>
+    <split-section />
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import IntroSection from '~/components/landingPage/IntroSection'
 import AboutSection from '~/components/landingPage/AboutSection'
 import ImagesSection from '~/components/landingPage/ImagesSection'
 import CtaSection from '~/components/landingPage/CtaSection'
+import SplitSection from '~/components/landingPage/SplitSection'
 import { instaDetails } from '~/static/insta'
 
 export default {
@@ -26,6 +28,7 @@ export default {
     AboutSection,
     ImagesSection,
     CtaSection,
+    SplitSection,
   },
   layout: 'landing-page',
   async asyncData({ $config: { inToken }, $axios }) {

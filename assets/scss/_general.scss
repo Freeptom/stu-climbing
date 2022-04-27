@@ -16,11 +16,13 @@ a {
   &--bold {
     font-weight: 700;
   }
+  &--inverse {
+    color: white;
+  }
 }
 
 .white-bg {
   background: white;
-  padding: var(--image-section-padding) 0;
 }
 
 h1 {

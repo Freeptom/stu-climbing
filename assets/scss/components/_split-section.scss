@@ -1,0 +1,15 @@
+.split {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (min-width: $lg) {
+    flex-direction: row;
+  }
+  &__content {
+    background: var(--clr-primary-400);
+    font-size: var(--step-0);
+    padding: 2rem;
+    font-family: 'Gaspar';
+    height: 100%;
+  }
+}

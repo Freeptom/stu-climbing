@@ -1,6 +1,6 @@
 .image-container {
   overflow: hidden;
-  padding-bottom: calc(var(--image-section-padding) / 2);
+  padding: var(--image-section-padding) 0;
   gap: 1rem 3rem;
   @media screen and (min-width: $lg) {
     flex-direction: row;
