@@ -1,15 +1,19 @@
 .split {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  gap: 0;
+  grid-template-columns: 1fr;
+
   @media screen and (min-width: $lg) {
-    flex-direction: row;
+    grid-template-columns: 3fr 2fr;
   }
   &__content {
     background: var(--clr-primary-400);
     font-size: var(--step-0);
-    padding: 2rem;
+    padding: 4rem 2rem;
     font-family: 'Gaspar';
     height: 100%;
+  }
+  &__img {
+    width: 100%;
   }
 }

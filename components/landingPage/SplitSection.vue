@@ -12,10 +12,14 @@
           <span class="standout standout--bold standout--inverse"
             >consectetur adipiscing</span
           >
-          elit. Nec id quam ornare dictum risus, massa nunc rutrum. Iaculis
-          varius sed feugiat at. Nisi vitae eu, etiam magna eget lectus ornare
-          mattis. Tempor, interdum aenean phasellus tortor donec quam venenatis
-          volutpat.
+          elit. Nec id quam ornare dictum risus,
+          <span class="standout standout--bold standout--inverse"
+            >massa nunc rutrum</span
+          >. Iaculis varius sed feugiat at. Nisi vitae eu, etiam magna eget
+          <span class="standout standout--bold standout--inverse"
+            >lectus ornare mattis. Tempor, interdum aenean</span
+          >
+          phasellus tortor donec quam venenatis volutpat.
         </p>
       </div>
     </div>

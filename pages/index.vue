@@ -8,6 +8,7 @@
       <cta-section />
     </div>
     <split-section />
+    <app-footer />
   </div>
 </template>
 
@@ -18,6 +19,7 @@ import AboutSection from '~/components/landingPage/AboutSection'
 import ImagesSection from '~/components/landingPage/ImagesSection'
 import CtaSection from '~/components/landingPage/CtaSection'
 import SplitSection from '~/components/landingPage/SplitSection'
+import AppFooter from '~/components/landingPage/AppFooter'
 import { instaDetails } from '~/static/insta'
 
 export default {
@@ -29,6 +31,7 @@ export default {
     ImagesSection,
     CtaSection,
     SplitSection,
+    AppFooter,
   },
   layout: 'landing-page',
   async asyncData({ $config: { inToken }, $axios }) {
