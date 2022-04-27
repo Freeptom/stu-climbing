@@ -8,10 +8,13 @@
   }
   &__content {
     background: var(--clr-primary-400);
-    font-size: var(--step-0);
+    font-size: var(--font-size-md);
     padding: 4rem 2rem;
     font-family: 'Gaspar';
     height: 100%;
+    p {
+      margin-bottom: 1rem;
+    }
   }
   &__img {
     width: 100%;

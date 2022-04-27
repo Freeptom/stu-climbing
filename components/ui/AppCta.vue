@@ -5,7 +5,7 @@
       <slot name="body"></slot>
     </div>
 
-    <app-button v-if="!hideButton" alt
+    <app-button v-if="!hideButton"
       ><slot name="cta">Contact Now</slot></app-button
     >
   </div>

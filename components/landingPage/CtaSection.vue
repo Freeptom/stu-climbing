@@ -5,7 +5,12 @@
         >Lorem ipsum dolor sit amet,
         <span class="standout">consectetur adipiscing</span> elit.</template
       >
-      <template #body><p>test test</p></template>
+      <template #body
+        ><p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nisi
+          sed quam condimentum aliquet odio mi nibh.
+        </p></template
+      >
     </app-cta>
   </app-section>
 </template>
