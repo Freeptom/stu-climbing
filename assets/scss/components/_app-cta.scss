@@ -49,6 +49,10 @@
 
 .cta-block {
   background: var(--clr-neutral-900);
+  background-image: url('~assets/images/topography.svg');
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: cover;
   max-width: $lg;
   display: flex;
   flex-direction: column;
