@@ -5,6 +5,8 @@
         class="split__img"
         src="~/assets/images/bouldering.png"
         alt="A person reaching a hold on a climbing wall"
+        height="628"
+        width="902"
       />
       <div class="split__content">
         <p>
