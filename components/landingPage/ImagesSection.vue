@@ -11,7 +11,12 @@
           :key="post.id"
           class="media-scroller__element"
         >
-          <img :src="post.media_url" height="160" width="160" />
+          <img
+            v-if="post.media_url"
+            :src="post.media_url"
+            height="160"
+            width="160"
+          />
         </div>
       </ul>
     </div>
