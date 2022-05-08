@@ -6,16 +6,42 @@
   @media screen and (min-width: $lg) {
     grid-template-columns: 3fr 2fr;
   }
-  &__content {
+  &__container {
     background: var(--clr-primary-400);
-    padding: 4rem 2rem;
+    padding: 4rem;
     font-family: 'Gaspar';
     height: 100%;
-    font-size: var(--font-size-md);
+    font-size: var(--font-size-base);
 
     p {
       margin-bottom: 1rem;
     }
+  }
+  &__heading {
+    font-size: var(--font-size-lg);
+    max-width: $sm;
+    color: white;
+    font-family: 'Gaspar';
+    margin-bottom: 2rem;
+  }
+  &__testimonial {
+    position: relative;
+    margin-bottom: 4rem;
+    &::before {
+      content: '"';
+      top: 1rem;
+      left: -2rem;
+      font-size: 4rem;
+      line-height: 0;
+      position: absolute;
+      font-weight: 700;
+    }
+  }
+  &__testimonial-meta {
+    font-size: 1rem;
+  }
+  &__name {
+    font-weight: 700;
   }
   &__img {
     width: 100%;

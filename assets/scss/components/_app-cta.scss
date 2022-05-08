@@ -65,9 +65,10 @@
     margin: 0 auto var(--image-section-padding) auto;
   }
   &__title {
-    font-size: var(--font-size-md);
+    font-size: var(--font-size-lg);
     text-align: center;
     max-width: $sm;
+    font-family: 'Gaspar';
   }
   &__body {
     & > * {

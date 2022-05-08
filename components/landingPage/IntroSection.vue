@@ -7,7 +7,7 @@
           Reach <span class="standout">new heights</span> with Stu
         </h1></template
       >
-      <template #cta>Contact Now &#10141;</template>
+      <template #cta>Book your next adventure &#10141;</template>
     </app-cta>
   </app-section>
 </template>

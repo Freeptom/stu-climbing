@@ -8,33 +8,20 @@
         height="628"
         width="902"
       />
-      <div class="split__content">
-        <p>
-          Lorem ipsum dolor sit amet,
-          <span class="standout standout--bold standout--inverse"
-            >consectetur adipiscing</span
-          >
-          elit. Nec id quam ornare dictum risus,
-          <span class="standout standout--bold standout--inverse"
-            >massa nunc rutrum</span
-          >. Iaculis varius sed feugiat at. Nisi vitae eu, etiam magna eget
-          <span class="standout standout--bold standout--inverse"
-            >lectus ornare mattis. Tempor, interdum aenean</span
-          >
-          phasellus tortor donec quam venenatis volutpat.
-        </p>
-        <p>
-          Ut enim ad minima veniam,
-          <span class="standout standout--bold standout--inverse"
-            >quis nostrum exercitationem ullam</span
-          >
-          corporis suscipit, ex ea commodi consequatur? Quis autem
-          <span class="standout standout--bold standout--inverse"
-            >vel eum iure reprehenderit</span
-          >
-          qui in ea voluptate velit esse, vel illum qui dolorem eum fugiat quo
-          voluptas nulla pariatur?
-        </p>
+      <div class="split__container">
+        <h2 class="split__heading">What people are saying</h2>
+
+        <div
+          v-for="testimonial in testimonials"
+          :key="testimonial.name"
+          class="split__testimonial"
+        >
+          <div v-html="testimonial.message"></div>
+          <p class="split__testimonial-meta">
+            <span class="split__name">{{ testimonial.name }}</span> &#8212;
+            {{ testimonial.title }}
+          </p>
+        </div>
       </div>
     </div>
   </app-section>
@@ -46,6 +33,32 @@ export default {
   name: 'SplitSection',
   components: {
     AppSection,
+  },
+  data() {
+    return {
+      testimonials: [
+        {
+          name: 'Rebekah',
+          title: 'New adventurer',
+          message: `<p>I really appreciated the way you guided us through a lesser known trail in the Peaks. It was <span class="standout standout--bold standout--inverse">exactly what I was looking for</span>, out of my comfort zone, away from crowds but amongst some interesting landscape. Thank you so much!!</p>`,
+        },
+        {
+          name: 'Molly',
+          title: 'Good girl',
+          message: `<p>Thank you for keeping me out of misadventure on our last trip to the Dales, that could of ended up in some murky business. Cheers mate.</p>`,
+        },
+        {
+          name: 'Tom',
+          title: 'Hiker and new climber',
+          message: `<p>I love the way you coach me through a range of options during a climb and help me feel in control of the route.</p>`,
+        },
+        {
+          name: 'Carla',
+          title: 'Experienced climber & hiker',
+          message: `<p>My confidence has improved so much on outdoor climbs, particularly on roofs which aren't my best area.  He teaches me something new in every session.</p>`,
+        },
+      ],
+    }
   },
 }
 </script>

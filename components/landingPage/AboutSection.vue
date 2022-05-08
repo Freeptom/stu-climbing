@@ -24,17 +24,15 @@ export default {
   },
   data() {
     return {
-      intro: `<p>Lorem ipsum dolor, consectetur adipiscing elit. <span class="standout standout--bold">Nec id quam</span> Nisi vitae eu, etiam magna <span class="standout standout--bold">ornare dictum risus</span> ornare mattis.Quam venenatis volutpat.</p>`,
+      intro: `<p>Yorkshire born and bred, Stu has spent the last decade supporting others to explore and <span class="standout standout--bold">conquer the best hikes and climbs </span> within God's Own Country and beyond &#8212; regardless of experience!
+`,
 
       about: [
         {
-          message: `<p>Consectetur adipiscing elit. <span class="standout standout--bold">Nec id quam</span> ornare dictum risus. Nisi vitae eu, etiam magna <span class="standout standout--bold">ornare dictum risus</span>.<span class="standout standout--bold">tortor donec</span> quam venenatis volutpat.</p>`,
+          message: `<p>Stu's best memories of days out have been hanging off crags and on top of peaks, and he wants to help you create <span class="standout standout--bold">unforgettable experiences</span> too. Whether you're an experienced climber hoping to <span class="standout standout--bold">improve on your technique</span> or just starting out and wanting to  <span class="standout standout--bold">build confidence</span>, Stu can help anyone looking to overcome their next challenge or explore somewhere new.</p>`,
         },
         {
-          message: `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis varius sed feugiat at. Etiam magna <span class="standout standout--bold">ornare dictum risus</span> ornare mattis.</p>`,
-        },
-        {
-          message: `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  ornare dictum risus, massa nunc rutrum. Etiam magna <span class="standout standout--bold">ornare dictum risus</span> ornare mattis.`,
+          message: `<p>Stu has experience guiding many clients from <span class="standout standout--bold">indoor bouldering and rope climbs</span> to <span class="standout standout--bold">outdoor rock climbing and abseiling</span>. He has helped others reach the top of mountains and <span class="standout standout--bold">always ensures you make it back to your car</span>. You're guaranteed to have an enjoyable day amongst <span class="standout standout--bold">fantastic scenery, in the best company</span>.</p>`,
         },
       ],
     }

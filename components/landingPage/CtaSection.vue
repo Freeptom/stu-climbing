@@ -2,14 +2,11 @@
   <app-section on-light full-bleed>
     <app-cta is-block>
       <template #title
-        >Lorem ipsum dolor sit amet,
-        <span class="standout">consectetur adipiscing</span> elit.</template
+        >Your next
+        <span class="standout">adventure is waiting for you</span>.</template
       >
       <template #body
-        ><p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nisi
-          sed quam condimentum aliquet odio mi nibh.
-        </p></template
+        ><p>Get in touch with Stu to take the first step.</p></template
       >
     </app-cta>
   </app-section>

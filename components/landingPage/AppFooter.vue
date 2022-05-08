@@ -3,7 +3,9 @@
     <p>&copy; Rock Stories</p>
     <ul>
       <li v-for="(icon, index) in icons" :key="index">
-        <img :src="require(`~/assets/images/icons/${icon}.svg`)" />
+        <a :href="icon.link" target="_blank">
+          <img :src="require(`~/assets/images/icons/${icon.name}.svg`)" />
+        </a>
       </li>
     </ul>
   </footer>
@@ -14,7 +16,16 @@ export default {
   name: 'AppFooter',
   data() {
     return {
-      icons: ['phone', 'email', 'facebook', 'instagram', 'twitter'],
+      icons: [
+        { name: 'phone', link: '' },
+        { name: 'email', link: '' },
+        { name: 'facebook', link: '' },
+        {
+          name: 'instagram',
+          link: 'https://www.instagram.com/beta_stu/?hl=en',
+        },
+        { name: 'twitter', link: '' },
+      ],
     }
   },
 }
