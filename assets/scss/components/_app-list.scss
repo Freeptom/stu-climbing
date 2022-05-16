@@ -1,0 +1,32 @@
+.app-list-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem 1rem;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  @media screen and (min-width: $lg) {
+    flex-direction: row;
+    margin-bottom: 1.5rem;
+  }
+  &__title {
+    font-size: var(--font-size-xl);
+    font-family: 'Gaspar';
+    font-weight: 400;
+  }
+
+  &__title-decoration {
+    margin: 0;
+    display: block;
+    background-color: var(--clr-primary-400);
+    border: none;
+    min-width: 98px;
+    height: 2px;
+  }
+}
+
+.app-list {
+  list-style-type: disc;
+  li {
+    margin-bottom: 1rem;
+  }
+}

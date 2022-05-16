@@ -1,4 +1,20 @@
+// general
+@import './variables';
 @import './general';
+@import './fonts';
 @import './reset';
-@import './activity-card';
-@import './activity-list';
+@import './layouts/landing-page';
+
+//components
+@import './components/activity-card';
+@import './components/activity-list';
+@import './components/app-logo';
+@import './components/app-nav';
+@import './components/app-button';
+@import './components/app-cta';
+@import './components/app-cols';
+@import './components/app-section';
+@import './components/app-list';
+@import './components/image-section';
+@import './components/split-section';
+@import './components/app-footer';

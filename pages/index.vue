@@ -1,45 +1,43 @@
 <template>
-  <section class="container">
-    <ActivitiesList :activity-items="activities" />
-  </section>
+  <div class="landing-bg wrapper">
+    <app-nav />
+    <intro-section />
+    <about-section />
+    <div class="white-bg full-bleed">
+      <images-section :posts="posts" />
+      <cta-section />
+    </div>
+    <split-section />
+    <app-footer />
+  </div>
 </template>
+
 <script>
-import { gql } from 'nuxt-graphql-request'
-import ActivitiesList from '~/components/ActivitiesList.vue'
+import AppNav from '~/components/layout/AppNav'
+import IntroSection from '~/components/landingPage/IntroSection'
+import AboutSection from '~/components/landingPage/AboutSection'
+import ImagesSection from '~/components/landingPage/ImagesSection'
+import CtaSection from '~/components/landingPage/CtaSection'
+import SplitSection from '~/components/landingPage/SplitSection'
+import AppFooter from '~/components/landingPage/AppFooter'
+import { instaDetails } from '~/static/insta'
 
 export default {
+  name: 'Home',
   components: {
-    ActivitiesList,
+    AppNav,
+    IntroSection,
+    AboutSection,
+    ImagesSection,
+    CtaSection,
+    SplitSection,
+    AppFooter,
   },
-  async asyncData({ $graphql }) {
-    const query = gql`
-      query {
-        activityCollection {
-          items {
-            text
-            slug
-            image {
-              title
-              description
-              contentType
-              fileName
-              size
-              url
-              width
-              height
-            }
-            categoryReferencesCollection {
-              items {
-                categoryName
-                slug
-              }
-            }
-          }
-        }
-      }
-    `
-    const activities = await $graphql.default.request(query)
-    return { activities }
+  layout: 'landing-page',
+  async asyncData({ $config: { inToken }, $axios }) {
+    const url = `${instaDetails.RootUrl}/${instaDetails.UserId}/media?access_token=${inToken}&fields=id,caption,media_type,media_url,timestamp`
+    const posts = await $axios.$get(url)
+    return { posts }
   },
 }
 </script>

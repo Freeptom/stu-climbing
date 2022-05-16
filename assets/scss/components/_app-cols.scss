@@ -1,0 +1,19 @@
+.app-cols {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  grid-gap: 2rem 4rem;
+  align-items: center;
+  @media screen and (min-width: $lg) {
+    flex-direction: row;
+  }
+  & > * {
+    flex: 1 1 auto;
+  }
+  &__img {
+    flex: 0 0 10rem;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+  }
+}

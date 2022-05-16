@@ -1,0 +1,28 @@
+:root {
+  --clr-neutral-900: #1a1a1a;
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-accent-400: hsl(142, 90%, 61%);
+  --clr-primary-400: #e21227;
+  --clr-primary-300: #b50e1f;
+
+  --font-size-xsm: clamp(0.64rem, calc(-0.01vw + 0.64rem), 0.63rem);
+  --font-size-sm: clamp(0.8rem, calc(0.08vw + 0.78rem), 0.84rem);
+  --font-size-base: clamp(1rem, calc(0.23vw + 0.94rem), 1.13rem);
+  --font-size-md: clamp(1.25rem, calc(0.45vw + 1.14rem), 1.5rem);
+  --font-size-lg: clamp(1.56rem, calc(0.79vw + 1.36rem), 2rem);
+  --font-size-xl: clamp(1.95rem, calc(1.29vw + 1.63rem), 2.66rem);
+  --font-size-xxl: clamp(2.44rem, calc(2.02vw + 1.94rem), 3.55rem);
+  --font-size-xxxl: clamp(3.05rem, calc(3.06vw + 2.29rem), 4.73rem);
+
+  --image-section-padding: calc(8.75rem / 2);
+  @media screen and (min-width: 1024px) {
+    --image-section-padding: 8.75rem;
+  }
+}
+
+// screens
+
+$sm: 640px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1280px;
