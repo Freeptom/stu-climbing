@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <p>&copy; Rock Stories</p>
+    <p>&copy; Crag Stories</p>
     <ul>
       <li v-for="(icon, index) in icons" :key="index">
         <a :href="icon.link" target="_blank">

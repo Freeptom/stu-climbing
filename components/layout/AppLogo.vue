@@ -1,6 +1,6 @@
 <template>
   <nuxt-link to="/" class="app-logo"
-    >Rock Stories
+    >Crag Stories
     <img src="~/assets/images/logo-mark.svg" />
   </nuxt-link>
 </template>
