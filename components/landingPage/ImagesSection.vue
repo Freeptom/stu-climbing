@@ -1,5 +1,5 @@
 <template>
-  <app-section on-light full-bleed right-bleed>
+  <app-section on-light right-bleed>
     <div class="image-container wrapper">
       <app-cta hide-button on-light>
         <template #byline>From the feed</template>

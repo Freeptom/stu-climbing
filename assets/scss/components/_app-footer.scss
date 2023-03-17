@@ -1,15 +1,14 @@
 .footer {
   font-family: 'Gaspar';
-  display: grid;
+  display: flex;
   grid-template-columns: 1fr;
   align-items: baseline;
   justify-content: space-between;
   align-items: baseline;
+  grid-gap: 2rem;
+  flex-wrap: wrap;
   gap: 2rem;
-  @media screen and (min-width: $lg) {
-    grid-template-columns: 1fr 1fr;
-  }
-  padding: 2rem 0;
+  padding: 2rem;
   p {
     line-height: 0;
     font-size: var(--font-size-sm);

@@ -17,18 +17,21 @@
 }
 
 .media-scroller {
-  display: grid;
-  grid-column: 2 / -1;
-  gap: 1rem;
-  grid-auto-flow: column;
-  grid-auto-columns: 34%;
-  @media screen and (min-width: $md) {
-    grid-auto-columns: 21%;
-  }
+  display: flex;
   overflow-x: scroll;
   overscroll-behavior-inline: contain;
   margin: 0;
   -webkit-overflow-scrolling: touch;
+  // @supports (display: grid) {
+  //   display: grid;
+  //   grid-column: 2 / -1;
+  //   gap: 1rem;
+  //   grid-auto-flow: column;
+  //   grid-auto-columns: 34%;
+  //   @media screen and (min-width: $md) {
+  //     grid-auto-columns: 21%;
+  //   }
+  // }
   &__element {
     & > img {
       inline-size: 100%;
