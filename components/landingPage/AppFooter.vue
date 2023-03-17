@@ -22,7 +22,7 @@ export default {
         { name: 'facebook', link: '' },
         {
           name: 'instagram',
-          link: 'https://www.instagram.com/beta_stu/?hl=en',
+          link: 'https://www.instagram.com/crag_stories/?hl=en',
         },
         { name: 'twitter', link: '' },
       ],
