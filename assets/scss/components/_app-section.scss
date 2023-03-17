@@ -10,6 +10,10 @@
   &--intro {
     min-height: 50vh;
     position: relative;
+    @media (orientation: landscape) {
+      min-height: 30vh;
+    }
+
     @media screen and (min-width: $lg) {
       margin-bottom: 28rem;
     }
