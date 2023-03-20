@@ -47,25 +47,25 @@ h1 {
   flex-direction: column;
   max-width: 1200px;
   margin: 0 auto;
-  // @supports (display: grid) {
-  //   max-width: none;
-  //   margin: 0;
-  //   display: grid;
-  //   grid-template-columns: 1fr min(64rem, calc(100% - 64px)) 1fr;
-  //   grid-column-gap: 32px;
-  //   & > * {
-  //     grid-column: 2;
-  //   }
-  // }
+  @supports (display: grid) {
+    max-width: none;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr min(64rem, calc(100% - 64px)) 1fr;
+    grid-column-gap: 32px;
+    & > * {
+      grid-column: 2;
+    }
+  }
 }
 
 .full-bleed {
   width: 100vw;
   margin-left: 50%;
   transform: translate3d(-50%, 0, 0);
-  // @supports (display: grid) {
-  //   grid-column: 1 / -1;
-  //   margin-left: 0;
-  //   transform: translate3d(0, 0, 0);
-  // }
+  @supports (display: grid) {
+    grid-column: 1 / -1;
+    margin-left: 0;
+    transform: translate3d(0, 0, 0);
+  }
 }

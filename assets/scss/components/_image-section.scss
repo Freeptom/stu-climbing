@@ -14,26 +14,27 @@
 
 .media-scroller {
   display: flex;
+  gap: 1rem;
   overflow-x: scroll;
   overscroll-behavior-inline: contain;
   -webkit-overflow-scrolling: touch;
   margin: 0;
-  // @supports (display: grid) {
-  //   display: grid;
-  //   grid-column: 2 / -1;
-  //   gap: 1rem;
-  //   grid-auto-flow: column;
-  //   grid-auto-columns: 34%;
-  //   @media screen and (min-width: $md) {
-  //     grid-auto-columns: 21%;
-  //   }
-  // }
+  @supports (display: grid) {
+    display: grid;
+    grid-column: 2 / -1;
+    grid-auto-flow: column;
+    grid-auto-columns: 34%;
+    @media screen and (min-width: $md) {
+      grid-auto-columns: 21%;
+    }
+  }
   &__element {
+    flex: 1 0 21%;
     & > img {
       height: 100%;
-      // @supports (display: grid) {
-      //   height: auto;
-      // }
+      @supports (display: grid) {
+        height: auto;
+      }
       inline-size: 100%;
       aspect-ratio: 1 / 1;
       object-fit: cover;

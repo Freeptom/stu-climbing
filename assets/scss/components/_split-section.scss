@@ -4,15 +4,15 @@
   @media screen and (min-width: $lg) {
     flex-direction: row;
   }
-  // @supports (display: grid) {
-  //   display: grid;
-  //   gap: 0;
-  //   grid-template-columns: 1fr;
+  @supports (display: grid) {
+    display: grid;
+    gap: 0;
+    grid-template-columns: 1fr;
 
-  //   @media screen and (min-width: $lg) {
-  //     grid-template-columns: 3fr 2fr;
-  //   }
-  // }
+    @media screen and (min-width: $lg) {
+      grid-template-columns: 3fr 2fr;
+    }
+  }
   &__container {
     background: var(--clr-primary-300);
     padding: 4rem;
