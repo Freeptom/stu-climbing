@@ -5,7 +5,7 @@
         <template #byline>From the feed</template>
         <template #body><p>Where to next?</p></template>
       </app-cta>
-      <ul class="media-scroller snaps-inline full-bleed">
+      <ul class="media-scroller snaps-inline">
         <div
           v-for="post in imagePosts"
           :key="post.id"
