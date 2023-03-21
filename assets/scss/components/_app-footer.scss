@@ -33,7 +33,7 @@
     }
     li {
       margin: 0 1rem;
-      @supports (gap: 1.5rem) {
+      @supports (width: min(64rem, calc(100% - 64px))) {
         margin: 0;
       }
     }
