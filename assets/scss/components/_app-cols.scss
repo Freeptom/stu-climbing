@@ -2,8 +2,10 @@
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-between;
-  grid-gap: 2rem 4rem;
   align-items: center;
+  @supports (grid-gap: 2rem 4rem) {
+    gap: 2rem 4rem;
+  }
   @media screen and (min-width: $lg) {
     flex-direction: row;
   }
@@ -15,5 +17,9 @@
     max-width: 500px;
     width: 100%;
     height: auto;
+    margin: 1rem;
+    @supports (grid-gap: 2rem 4rem) {
+      margin: 0;
+    }
   }
 }
