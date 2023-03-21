@@ -17,9 +17,9 @@
     max-width: 500px;
     width: 100%;
     height: auto;
-    margin: 1rem;
     @supports (grid-gap: 2rem 4rem) {
       margin: 0;
     }
+    margin: 1rem;
   }
 }
