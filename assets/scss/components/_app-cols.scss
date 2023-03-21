@@ -3,7 +3,7 @@
   flex-direction: column-reverse;
   justify-content: space-between;
   align-items: center;
-  @supports (grid-gap: 2rem 4rem) and (width: calc(100% - 80em)) {
+  @supports (gap: 2rem 4rem) {
     gap: 2rem 4rem;
   }
   @media screen and (min-width: $lg) {
@@ -18,7 +18,7 @@
     width: 100%;
     height: auto;
     margin: 1rem;
-    @supports (grid-gap: 2rem 4rem) and (width: calc(100% - 80em)) {
+    @supports (gap: 2rem 4rem) {
       margin: 0;
     }
   }
