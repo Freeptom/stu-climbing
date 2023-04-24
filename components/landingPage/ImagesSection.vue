@@ -6,18 +6,20 @@
         <template #body><p>Where to next?</p></template>
       </app-cta>
       <ul class="media-scroller snaps-inline">
-        <div
-          v-for="post in imagePosts"
-          :key="post.id"
-          class="media-scroller__element"
-        >
-          <img
-            v-if="post.media_url"
-            :src="post.media_url"
-            height="160"
-            width="160"
-          />
-        </div>
+        <li v-for="post in imagePosts" :key="post.id">
+          <a
+            :href="post.permalink"
+            class="media-scroller__element"
+            target="_blank"
+          >
+            <img
+              v-if="post.media_url"
+              :src="post.media_url"
+              height="160"
+              width="160"
+            />
+          </a>
+        </li>
       </ul>
     </div>
     <!-- <button type="button" @click="scroll">Scroll</button> -->

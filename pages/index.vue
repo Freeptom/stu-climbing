@@ -35,7 +35,7 @@ export default {
   },
   layout: 'landing-page',
   async asyncData({ $config: { inToken }, $axios }) {
-    const url = `${instaDetails.RootUrl}/${instaDetails.UserId}/media?access_token=${inToken}&fields=id,caption,media_type,media_url,timestamp`
+    const url = `${instaDetails.RootUrl}/${instaDetails.UserId}/media?access_token=${inToken}&fields=id,caption,media_type,media_url,timestamp,permalink`
     const posts = await $axios.$get(url)
     return { posts }
   },
