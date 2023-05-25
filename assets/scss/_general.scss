@@ -10,16 +10,6 @@ a {
   color: white;
 }
 
-.standout {
-  color: var(--clr-primary-400);
-  &--bold {
-    font-weight: 700;
-  }
-  &--inverse {
-    color: white;
-  }
-}
-
 .white-bg {
   background: white;
 }

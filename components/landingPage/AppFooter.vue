@@ -17,14 +17,12 @@ export default {
   data() {
     return {
       icons: [
-        { name: 'phone', link: '' },
-        { name: 'email', link: '' },
-        { name: 'facebook', link: '' },
+        { name: 'phone', link: 'tel:+447962225572' },
+        { name: 'email', link: 'mailto:stuartgwetherell@gmail.com' },
         {
           name: 'instagram',
           link: 'https://www.instagram.com/crag_stories/?hl=en',
         },
-        { name: 'twitter', link: '' },
       ],
     }
   },

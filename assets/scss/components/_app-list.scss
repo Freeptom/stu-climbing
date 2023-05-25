@@ -1,3 +1,10 @@
+.app-list-intro {
+  p {
+    font-size: var(--font-size-base);
+    margin-bottom: 1rem;
+  }
+}
+
 .app-list-header {
   display: flex;
   flex-direction: column;

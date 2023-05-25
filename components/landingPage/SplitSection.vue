@@ -40,12 +40,12 @@ export default {
         {
           name: 'Rebekah',
           title: 'New adventurer',
-          message: `<p>I really appreciated the way you guided us through a lesser known trail in the Peaks. It was <span class="standout standout--bold standout--inverse">exactly what I was looking for</span>, out of my comfort zone, away from crowds but amongst some interesting landscape. Thank you so much!!</p>`,
+          message: `<p>I really appreciated the way you guided us through a lesser known trail in the Peaks. It was exactly what I was looking for, out of my comfort zone, away from crowds but amongst some interesting landscape. Thank you so much!!</p>`,
         },
         {
           name: 'Molly',
-          title: 'Good girl',
-          message: `<p>Thank you for keeping me out of misadventure on our last trip to the Dales, that could of ended up in some murky business. Cheers mate.</p>`,
+          title: 'Hill walker',
+          message: `<p>Thank you for keeping me out of misadventure on our last trip to the Dales, that could have ended up in some murky business. Cheers mate.</p>`,
         },
         {
           name: 'Tom',
