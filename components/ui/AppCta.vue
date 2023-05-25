@@ -6,7 +6,11 @@
     </div>
 
     <app-button v-if="!hideButton"
-      ><slot name="cta">Contact Now</slot></app-button
+      ><slot name="cta"
+        ><a href="mailto:stuartgwetherell@gmail.com" target="_blank"
+          >Contact Now</a
+        ></slot
+      ></app-button
     >
   </div>
 
@@ -19,7 +23,11 @@
       <slot name="body"></slot>
     </div>
     <app-button v-if="!hideButton"
-      ><slot name="cta">Contact Now</slot></app-button
+      ><slot name="cta"
+        ><a href="mailto:stuartgwetherell@gmail.com" target="_blank"
+          >Contact Now</a
+        ></slot
+      ></app-button
     >
   </div>
 </template>

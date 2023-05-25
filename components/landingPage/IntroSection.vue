@@ -2,7 +2,11 @@
   <app-section class="section--intro">
     <app-cta is-main>
       <template #body><h1>Take your stories to new heights...</h1></template>
-      <template #cta>Book your next adventure &#10141;</template>
+      <template #cta
+        ><a href="mailto:stuartgwetherell@gmail.com" target="_blank"
+          >Book your next adventure &#10141;</a
+        ></template
+      >
     </app-cta>
   </app-section>
 </template>
