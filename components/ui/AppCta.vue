@@ -7,9 +7,7 @@
 
     <app-button v-if="!hideButton"
       ><slot name="cta"
-        ><a href="mailto:stuartgwetherell@gmail.com" target="_blank"
-          >Contact Now</a
-        ></slot
+        ><a :href="contactDetails.email" target="_blank">Contact Now</a></slot
       ></app-button
     >
   </div>
@@ -24,15 +22,14 @@
     </div>
     <app-button v-if="!hideButton"
       ><slot name="cta"
-        ><a href="mailto:stuartgwetherell@gmail.com" target="_blank"
-          >Contact Now</a
-        ></slot
+        ><a :href="contactDetails.email" target="_blank">Contact Now</a></slot
       ></app-button
     >
   </div>
 </template>
 
 <script>
+import { contactDetails } from '~/constants/constants'
 import AppByline from '@/components/ui/AppByline.vue'
 import AppButton from '@/components/ui/AppButton.vue'
 export default {
@@ -55,6 +52,12 @@ export default {
       type: Boolean,
       default: false,
     },
+  },
+
+  data() {
+    return {
+      contactDetails,
+    }
   },
 }
 </script>
