@@ -3,6 +3,7 @@
   flex-direction: column-reverse;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 2rem;
   @supports (gap: 2rem 4rem) {
     gap: 2rem 4rem;
   }

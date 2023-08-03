@@ -28,27 +28,50 @@
       </div>
     </app-cols>
     <div>
-      <p>
-        Stu lives in Yorkshire, with the Dales and Moors on his doorstep, and
-        the Peak and Lakes not much farther.
-      </p>
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          max-width: 70ch;
+          margin: 0 auto;
+          text-align: center;
+        "
+      >
+        <p style="margin-bottom: 1rem">
+          Stu lives in Yorkshire, with the Dales and Moors on his doorstep, and
+          the Peak and Lakes not much farther.
+        </p>
+        <app-cta>
+          <template #cta
+            ><a :href="contactDetails.email" target="_blank"
+              >Get in touch &#10141;</a
+            >
+          </template>
+        </app-cta>
+      </div>
     </div>
   </app-section>
 </template>
 
 <script>
+import { contactDetails } from '~/constants/constants'
 import AppSection from '~/components/layout/AppSection.vue'
 import AppCols from '~/components/layout/AppCols.vue'
 import AppList from '~/components/ui/AppList.vue'
+import AppCta from '~/components/ui/AppCta.vue'
+
 export default {
   name: 'IntroSection',
   components: {
     AppSection,
     AppCols,
     AppList,
+    AppCta,
   },
   data() {
     return {
+      contactDetails,
       climbingDetails: [
         { text: 'Indoor and outdoor climbing options' },
         { text: 'Content to suit your needs' },
