@@ -3,8 +3,8 @@
     <div class="split">
       <img
         class="split__img"
-        src="~/assets/images/bouldering.png"
-        alt="A person reaching a hold on a climbing wall"
+        src="~/assets/images/sunset.jpg"
+        alt="A sunset from of a mountain view"
         height="628"
         width="902"
       />
@@ -43,11 +43,6 @@ export default {
           message: `<p>I really appreciated the way you guided us through a lesser known trail in the Peaks. It was exactly what I was looking for, out of my comfort zone, away from crowds but amongst some interesting landscape. Thank you so much!!</p>`,
         },
         {
-          name: 'Molly',
-          title: 'Hill walker',
-          message: `<p>Thank you for keeping me out of misadventure on our last trip to the Dales, that could have ended up in some murky business. Cheers mate.</p>`,
-        },
-        {
           name: 'Tom',
           title: 'Hiker and new climber',
           message: `<p>I love the way you coach me through a range of options during a climb and help me feel in control of the route.</p>`,
@@ -55,7 +50,7 @@ export default {
         {
           name: 'Carla',
           title: 'Experienced climber & hiker',
-          message: `<p>My confidence has improved so much on outdoor climbs, particularly on roofs which aren't my best area.  He teaches me something new in every session.</p>`,
+          message: `<p>My confidence has improved so much on outdoor climbs. He teaches me something new in every session.</p>`,
         },
       ],
     }

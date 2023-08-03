@@ -19,6 +19,10 @@
   }
   &--intro,
   &--about {
+    p {
+      font-size: var(--font-size-base);
+      margin-bottom: 2rem;
+    }
     margin-bottom: var(--margin-bottom);
   }
   &--right-bleed {

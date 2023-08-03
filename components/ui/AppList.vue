@@ -1,12 +1,10 @@
 <template>
-  <div>
-    <div v-if="title" class="app-list-header">
-      <h2 class="app-list-header__title">{{ title }}</h2>
-      <hr class="app-list-header__title-decoration" />
-    </div>
-    <div class="app-list-intro"><slot name="intro"></slot></div>
-    <ul class="app-list" role="list">
-      <li v-for="item in items" :key="item.message" v-html="item.message"></li>
+  <div class="app-list">
+    <h2 class="app-list__title">{{ title }}</h2>
+    <ul class="app-list__list" role="list">
+      <li v-for="item in items" :key="item.text" :class="customClass">
+        {{ item.text }}
+      </li>
     </ul>
   </div>
 </template>
@@ -24,6 +22,10 @@ export default {
       default() {
         return []
       },
+    },
+    customClass: {
+      type: Object,
+      default: () => {},
     },
   },
 }

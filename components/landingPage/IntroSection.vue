@@ -4,7 +4,7 @@
       <template #body><h1>Take your stories to new heights...</h1></template>
       <template #cta
         ><a :href="contactDetails.email" target="_blank"
-          >Book your next adventure &#10141;</a
+          >Get in touch &#10141;</a
         >
       </template>
     </app-cta>
