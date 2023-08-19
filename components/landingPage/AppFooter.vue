@@ -4,7 +4,10 @@
     <ul>
       <li v-for="(value, name, index) in contactDetails" :key="index">
         <a :href="value" target="_blank">
-          <img :src="require(`~/assets/images/icons/${name}.svg`)" />
+          <img
+            :src="require(`~/assets/images/icons/${name}.svg`)"
+            :alt="name"
+          />
         </a>
       </li>
     </ul>
