@@ -17,12 +17,12 @@
               :src="post.media_url"
               height="160"
               width="160"
+              :alt="post.caption"
             />
           </a>
         </li>
       </ul>
     </div>
-    <!-- <button type="button" @click="scroll">Scroll</button> -->
   </app-section>
 </template>
 
@@ -49,12 +49,6 @@ export default {
         return el.media_type === 'IMAGE' || el.media_type === 'CAROUSEL_ALBUM'
       })
     },
-    // visibleElements() {
-    //   return this.imagePosts.filter((child) => {
-    //     const childRect = child.getBoundingClientRect()
-    //     return rect.left <= childRect.left && rect.right >= childRect.right
-    //   })
-    // },
   },
   methods: {
     scroll() {

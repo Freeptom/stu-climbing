@@ -39,5 +39,18 @@ export default {
     const posts = await $axios.$get(url)
     return { posts }
   },
+  head() {
+    return {
+      title: 'Crag Stories',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'Take your stories to new heights with Crag Stories. Explore thrilling adventures guided by outdoor instructor, Stuart Serrechia. From beginners to seasoned adventures, discover tailored experiences that blend skill-building with breathtaking views. Unleash your inner adventurer today!',
+        },
+      ],
+    }
+  },
 }
 </script>

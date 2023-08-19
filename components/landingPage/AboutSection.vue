@@ -5,6 +5,8 @@
         class="app-cols__img"
         src="~/assets/images/stu-climbing.png"
         alt="Stu passing rope down to help a climber below him"
+        height="400px"
+        width="400px"
       />
       <div>
         <p>
