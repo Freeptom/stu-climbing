@@ -17,6 +17,7 @@
   gap: 1rem;
   overflow-x: scroll;
   overscroll-behavior-inline: contain;
+  list-style: none;
   -webkit-overflow-scrolling: touch;
   margin: 0;
   @supports (display: grid) {
