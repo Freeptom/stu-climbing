@@ -12,12 +12,14 @@
             class="media-scroller__element"
             target="_blank"
           >
-            <img
+            <nuxt-img
               v-if="post.media_url"
               :src="post.media_url"
-              height="160"
-              width="160"
+              height="200"
+              width="200"
               :alt="post.caption"
+              loading="lazy"
+              :placeholder="[200, 200, 2]"
             />
           </a>
         </li>

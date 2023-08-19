@@ -1,12 +1,13 @@
 <template>
   <app-section on-light full-bleed>
     <div class="split">
-      <img
+      <nuxt-img
         class="split__img"
-        src="~/assets/images/sunset.jpg"
+        src="/sunset.jpg"
         alt="A sunset from of a mountain view"
         height="628"
         width="902"
+        loading="lazy"
       />
       <div class="split__container">
         <h2 class="split__heading">What people are saying</h2>
