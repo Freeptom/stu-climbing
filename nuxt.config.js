@@ -15,23 +15,20 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'nuxt-stu-climbing',
     htmlAttrs: {
       lang: 'en',
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' }],
   },
 
   css: ['@/assets/scss/main'],
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
-
   modules: ['@nuxtjs/axios'],
 
   // // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
@@ -39,8 +36,12 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     'nuxt-graphql-request',
+    '@nuxt/image',
   ],
 
+  image: {
+    domains: ['https://scontent-man2-1.cdninstagram.com'],
+  },
   graphql: {
     /**
      * An Object of your GraphQL clients
