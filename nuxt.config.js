@@ -39,7 +39,7 @@ export default {
   css: ['@/assets/scss/main'],
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
-  modules: ['@nuxtjs/axios', 'nuxt-gtag'],
+  modules: ['@nuxtjs/axios'],
 
   // // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
