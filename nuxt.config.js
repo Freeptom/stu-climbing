@@ -25,6 +25,15 @@ export default {
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' }],
+    script: [
+      {
+        src: `https://www.googletagmanager.com/gtag/js?id=G-MGE0M5ST41`,
+        async: true,
+      },
+      {
+        src: 'ga.js',
+      },
+    ],
   },
 
   css: ['@/assets/scss/main'],
