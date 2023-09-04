@@ -5,6 +5,7 @@ export default {
       process.env.CTF_CDA_ACCESS_TOKEN ||
       '-Su1tjxF-qpNwC97V3moe00qishyE4Q0z6Wwmk0jYyM',
     ctfEnvironment: 'master',
+    NUXT_PUBLIC_GTAG_ID: process.env.NUXT_PUBLIC_GTAG_ID,
   },
   privateRuntimeConfig: {
     inToken: process.env.IN_TOKEN,
@@ -29,7 +30,7 @@ export default {
   css: ['@/assets/scss/main'],
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
-  modules: ['@nuxtjs/axios'],
+  modules: ['@nuxtjs/axios', 'nuxt-gtag'],
 
   // // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
