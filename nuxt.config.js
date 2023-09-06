@@ -31,10 +31,6 @@ export default {
     'nuxt-graphql-request',
     '@nuxt/image',
   ],
-  gtm: {
-    enabled: true,
-    id: 'GTM-PN77VRLG',
-  },
   image: {
     domains: ['https://scontent-man2-1.cdninstagram.com'],
   },
