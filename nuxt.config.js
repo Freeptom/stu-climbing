@@ -25,7 +25,7 @@ export default {
   css: ['@/assets/scss/main'],
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
-  modules: ['@nuxtjs/axios', '@nuxtjs/gtm'],
+  modules: ['@nuxtjs/axios'],
   buildModules: [
     '@nuxtjs/eslint-module',
     'nuxt-graphql-request',
@@ -34,8 +34,6 @@ export default {
   gtm: {
     enabled: true,
     id: 'GTM-PN77VRLG',
-    pageTracking: true,
-    scriptURL: 'https://www.googletagmanager.com/gtag/js',
   },
   image: {
     domains: ['https://scontent-man2-1.cdninstagram.com'],
