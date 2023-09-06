@@ -32,7 +32,9 @@ export default {
     '@nuxt/image',
   ],
   gtm: {
+    enabled: true,
     id: 'GTM-PN77VRLG',
+    pageTracking: true,
   },
   image: {
     domains: ['https://scontent-man2-1.cdninstagram.com'],
