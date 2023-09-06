@@ -9,6 +9,7 @@
         width="400px"
         loading="lazy"
         placeholder
+        as="image"
       />
       <div>
         <p>
