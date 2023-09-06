@@ -35,6 +35,7 @@ export default {
     enabled: true,
     id: 'GTM-PN77VRLG',
     pageTracking: true,
+    scriptURL: 'https://www.googletagmanager.com/gtag/js',
   },
   image: {
     domains: ['https://scontent-man2-1.cdninstagram.com'],
