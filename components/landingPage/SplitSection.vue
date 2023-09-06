@@ -9,6 +9,7 @@
         width="902"
         loading="lazy"
         placeholder
+        as="image"
       />
       <div class="split__container">
         <h2 class="split__heading">What people are saying</h2>

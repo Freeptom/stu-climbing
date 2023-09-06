@@ -20,6 +20,7 @@
               :alt="post.caption"
               loading="lazy"
               placeholder
+              as="image"
             />
           </a>
         </li>
