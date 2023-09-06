@@ -10,11 +10,7 @@ export default {
   privateRuntimeConfig: {
     inToken: process.env.IN_TOKEN,
   },
-
-  // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
-
-  // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     htmlAttrs: {
       lang: 'en',
@@ -25,30 +21,19 @@ export default {
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' }],
-    script: [
-      {
-        src: `https://www.googletagmanager.com/gtag/js?id=G-MGE0M5ST41`,
-        async: true,
-      },
-      {
-        src: 'ga.js',
-      },
-    ],
   },
-
   css: ['@/assets/scss/main'],
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
-  modules: ['@nuxtjs/axios'],
-
-  // // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
+  modules: ['@nuxtjs/axios', '@nuxtjs/gtm'],
   buildModules: [
-    // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     'nuxt-graphql-request',
     '@nuxt/image',
   ],
-
+  gtm: {
+    id: 'GTM-PN77VRLG',
+  },
   image: {
     domains: ['https://scontent-man2-1.cdninstagram.com'],
   },
@@ -74,31 +59,8 @@ export default {
           },
         },
       },
-      secondClient: {
-        // ...client config
-      },
-      // ...your other clients
     },
-
-    /**
-     * Options
-     * See: https://github.com/prisma-labs/graphql-request#passing-more-options-to-fetch
-     */
-    options: {},
-
-    /**
-     * Optional
-     * default: true (this includes cross-fetch/polyfill before creating the graphql client)
-     */
     useFetchPolyfill: true,
-
-    /**
-     * Optional
-     * default: false (this includes graphql-tag for node_modules folder)
-     */
     includeNodeModules: true,
   },
-
-  // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
 }
