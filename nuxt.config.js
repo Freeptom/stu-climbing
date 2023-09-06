@@ -32,7 +32,10 @@ export default {
     '@nuxt/image',
   ],
   image: {
-    domains: ['https://scontent-man2-1.cdninstagram.com'],
+    domains: [
+      'https://scontent-man2-1.cdninstagram.com',
+      'https://scontent-lcy1-1.cdninstagram.com',
+    ],
   },
   graphql: {
     /**

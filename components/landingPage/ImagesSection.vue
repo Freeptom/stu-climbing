@@ -19,7 +19,7 @@
               width="200"
               :alt="post.caption"
               loading="lazy"
-              :placeholder="[200, 200, 2]"
+              placeholder
             />
           </a>
         </li>

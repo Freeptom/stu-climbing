@@ -8,6 +8,7 @@
         height="400px"
         width="400px"
         loading="lazy"
+        placeholder
       />
       <div>
         <p>
