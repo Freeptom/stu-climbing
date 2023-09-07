@@ -11,6 +11,11 @@
         </a>
       </li>
     </ul>
+    <script
+      id="CookieDeclaration"
+      src="https://consent.cookiebot.com/992fd377-f74c-4232-9237-c90a462fe821/cd.js"
+      type="text/javascript"
+    ></script>
   </footer>
 </template>
 
