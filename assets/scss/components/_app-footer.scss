@@ -8,6 +8,13 @@
   gap: 2rem;
   grid-gap: 2rem;
   padding: 2rem;
+  &__links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    justify-content: center;
+  }
   @media screen and (min-width: $md) {
     justify-content: space-between;
   }
@@ -28,7 +35,6 @@
     padding: 0;
     margin: 0;
     gap: 1.5rem;
-
     @media screen and (min-width: $lg) {
       justify-self: flex-end;
     }
