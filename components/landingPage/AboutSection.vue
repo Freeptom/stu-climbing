@@ -1,15 +1,13 @@
 <template>
   <app-section class="section--about">
     <app-cols>
-      <nuxt-img
+      <img
         class="app-cols__img"
         src="/stu-climbing.png"
         alt="Stu passing rope down to help a climber below him"
         height="400px"
         width="400px"
         loading="lazy"
-        placeholder
-        as="image"
       />
       <div>
         <p>

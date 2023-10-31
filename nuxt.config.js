@@ -26,17 +26,7 @@ export default {
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
   modules: ['@nuxtjs/axios'],
-  buildModules: [
-    '@nuxtjs/eslint-module',
-    'nuxt-graphql-request',
-    '@nuxt/image',
-  ],
-  image: {
-    domains: [
-      'https://scontent-man2-1.cdninstagram.com',
-      'https://scontent-lcy1-1.cdninstagram.com',
-    ],
-  },
+  buildModules: ['@nuxtjs/eslint-module', 'nuxt-graphql-request'],
   graphql: {
     /**
      * An Object of your GraphQL clients
