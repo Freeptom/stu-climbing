@@ -19,6 +19,7 @@
               width="200"
               :alt="post.caption"
               loading="lazy"
+              draggable="false"
             />
           </a>
         </li>
